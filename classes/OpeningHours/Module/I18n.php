@@ -10,7 +10,7 @@ namespace OpeningHours\Module;
  */
 class I18n extends AbstractModule {
   /** The gettext text domain used for plugin translations */
-  const TEXTDOMAIN = 'wp-opening-hours';
+  const TEXTDOMAIN = 'oh-opening-hours';
 
   /** Path to the language directory */
   const LANGUAGE_PATH = '/language/';
@@ -38,20 +38,15 @@ class I18n extends AbstractModule {
     if (file_exists($customPath)) {
       load_textdomain(self::TEXTDOMAIN, $customPath);
     } else {
-      load_plugin_textdomain(self::TEXTDOMAIN, false, 'wp-opening-hours' . self::LANGUAGE_PATH);
+      load_plugin_textdomain(self::TEXTDOMAIN, false, 'oh-opening-hours' . self::LANGUAGE_PATH);
     }
   }
-
-  /**
-   * Returns an associative array representing the variables for JS translations
-   * @return    array     Associative array of translations with:
-   *                        key:    string w/ translation key
-   *                        value:  string w/ actual translation
-   */
+  /*
   public static function getJavascriptTranslations() {
     return array(
       'tp_hour' => __('Hour', self::TEXTDOMAIN),
       'tp_minute' => __('Minute', self::TEXTDOMAIN)
     );
   }
+  */
 }

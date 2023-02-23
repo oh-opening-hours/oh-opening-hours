@@ -1,4 +1,5 @@
-(function($) {
+jQuery(function($) {
+  flatpickr.l10ns.default.firstDayOfWeek = openingHoursData.startOfWeek || 0;
   $.fn.opExtendedSettings = function() {
     return this.each(function() {
       var wrap = $(this);
@@ -28,4 +29,4 @@
         .opExtendedSettings();
     });
   });
-})(jQuery);
+});

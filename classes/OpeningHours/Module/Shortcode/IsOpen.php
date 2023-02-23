@@ -25,14 +25,14 @@ class IsOpen extends AbstractShortcode {
 
     $this->defaultAttributes = array(
       'set_id' => null,
-      'open_text' => __('We\'re currently open.', 'wp-opening-hours'),
-      'closed_text' => __('We\'re currently closed.', 'wp-opening-hours'),
-      'closed_holiday_text' => __('We\'re currently closed for %1$s.', 'wp-opening-hours'),
+      'open_text' => __('We\'re currently open.', 'oh-opening-hours'),
+      'closed_text' => __('We\'re currently closed.', 'oh-opening-hours'),
+      'closed_holiday_text' => __('We\'re currently closed for %1$s.', 'oh-opening-hours'),
       'show_next' => false,
-      'next_format' => __('We\'re open again on %2$s (%1$s) from %3$s to %4$s', 'wp-opening-hours'),
+      'next_format' => __('We\'re open again on %2$s (%1$s) from %3$s to %4$s', 'oh-opening-hours'),
       'show_today' => 'never',
       'show_closed_holidays' => false,
-      'today_format' => __('Opening Hours today: %1$s', 'wp-opening-hours'),
+      'today_format' => __('Opening Hours today: %1$s', 'oh-opening-hours'),
       'before_widget' => '<div class="op-is-open-shortcode">',
       'after_widget' => '</div>',
       'before_title' => '<h3 class="op-is-open-title">',
@@ -90,6 +90,7 @@ class IsOpen extends AbstractShortcode {
     }
 
     $attributes['is_open'] = $isOpen;
+    $attributes['classes'] .= $attributes['classes'] ? ' ' : '';
     $attributes['classes'] .= $isOpen ? $attributes['open_class'] : $attributes['closed_class'];
 
     // If the attribute show_closed_holidays is enabled

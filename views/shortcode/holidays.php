@@ -30,7 +30,7 @@ if ( !count( $holidays ) )
 echo $before_widget;
 
 if ( ! empty( $title ) ) {
-	echo $before_title . $title . $after_title;
+	echo $before_title . esc_html( $title ) . $after_title;
 }
 
 ?>
@@ -41,14 +41,14 @@ if ( ! empty( $title ) ) {
     foreach ($holidays as $holiday) :
     $highlighted = ($highlight && $holiday->isActive()) ? $class_highlighted : '';
     ?>
-    <tr class="<?php echo $class_holiday; ?> <?php echo $highlighted; ?>">
-      <td class="col-name"><?php echo $holiday->getName(); ?></td>
+    <tr class="<?php echo esc_attr( $class_holiday ); ?> <?php echo esc_html( $highlighted ); ?>">
+      <td class="col-name"><?php echo esc_html( $holiday->getName() ); ?></td>
 
       <?php if (Dates::compareDate($holiday->getStart(), $holiday->getEnd()) === 0) : ?>
-        <td class="col-date" colspan="2"><?php echo Dates::format($date_format, $holiday->getStart()); ?></td>
+        <td class="col-date" colspan="2"><?php echo esc_html( Dates::format($date_format, $holiday->getStart()) ); ?></td>
       <?php else: ?>
-        <td class="col-date-start"><?php echo Dates::format($date_format, $holiday->getStart()); ?></td>
-        <td class="col-date-end"><?php echo Dates::format($date_format, $holiday->getEnd()); ?></td>
+        <td class="col-date-start"><?php echo esc_html( Dates::format($date_format, $holiday->getStart()) ); ?></td>
+        <td class="col-date-end"><?php echo esc_html( Dates::format($date_format, $holiday->getEnd()) ); ?></td>
       <?php endif; ?>
     </tr>
     <?php endforeach; ?>

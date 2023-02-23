@@ -23,7 +23,7 @@ class IrregularOpenings extends AbstractMetaBox {
   public function __construct() {
     parent::__construct(
       'op_meta_box_irregular_openings',
-      __('Irregular Openings', 'wp-opening-hours'),
+      __('Irregular Openings', 'oh-opening-hours'),
       self::CONTEXT_ADVANCED,
       self::PRIORITY_DEFAULT
     );
@@ -50,7 +50,7 @@ class IrregularOpenings extends AbstractMetaBox {
       'irregular_openings' => $set->getIrregularOpenings()
     );
 
-    $view = new ViewRenderer(op_view_path(self::TEMPLATE_PATH), $variables);
+    $view = new ViewRenderer(op_view_dir_path(self::TEMPLATE_PATH), $variables);
     $view->render();
   }
 

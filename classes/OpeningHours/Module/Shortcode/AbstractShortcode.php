@@ -74,7 +74,7 @@ abstract class AbstractShortcode extends AbstractModule {
   public function validate() {
     if (empty($this->shortcodeTag)) {
       throw new InvalidArgumentException(
-        __('Shortcode has no tag name and could not be registered', 'wp-opening-hours')
+        __('Shortcode has no tag name and could not be registered', 'oh-opening-hours')
       );
     }
   }
@@ -146,7 +146,7 @@ abstract class AbstractShortcode extends AbstractModule {
       'attributes' => $attributes
     );
 
-    $templatePathAbs = sprintf('%s/views/%s', op_plugin_path(), $templatePathRel);
+    $templatePathAbs = sprintf('%s/views/%s', op_plugin_dir_path(), $templatePathRel);
 
     /**
      * Filter the absolute shortcode template path. Callback should be:

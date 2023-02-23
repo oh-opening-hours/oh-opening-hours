@@ -50,7 +50,7 @@ class Set {
 
   public function __construct($id) {
     $this->id = $id;
-    $this->name = __('Untitled Set', 'wp-opening-hours');
+    $this->name = __('Untitled Set', 'oh-opening-hours');
     $this->periods = new ArrayObject();
     $this->holidays = new ArrayObject();
     $this->irregularOpenings = new ArrayObject();

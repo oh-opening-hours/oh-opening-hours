@@ -1,11 +1,15 @@
 {
-  "name": "janizde/wp-opening-hours",
+  "name": "wp-kirnbauer/oh-opening-hours",
   "description": "WordPress Plugin for Opening Hours management",
   "type": "wordpress-plugin",
   "authors": [
     {
       "name": "Jannik Portz",
       "email": "hello@jannikportz.de"
+    },
+    {
+      "name": "Klaus Kirnbauer",
+      "email": "wp@kirnbauer.dev"
     }
   ],
   "require-dev": {

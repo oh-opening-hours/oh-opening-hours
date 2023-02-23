@@ -30,7 +30,7 @@ if ( !count( $irregular_openings ) )
 echo $before_widget;
 
 if ( ! empty( $title ) ) {
-	echo $before_title . $title . $after_title;
+	echo $before_title . esc_html( $title ) . $after_title;
 }
 ?>
 
@@ -40,8 +40,8 @@ if ( ! empty( $title ) ) {
   foreach ($irregular_openings as $io) :
     $highlighted = ($highlight && $io->isInEffect()) ? $class_highlighted : '';
   ?>
-    <dt class="col-name <?php echo $highlighted; ?>"><?php echo $io->getName(); ?></dt>
-    <dd class="col-date col-time <?php echo $highlighted; ?>"><?php echo Dates::format($date_format, $io->getDate()); ?><br /><?php echo $io->getFormattedTimeRange($time_format); ?></dd>
+    <dt class="col-name <?php echo esc_attr( $highlighted ); ?>"><?php echo esc_html( $io->getName() ); ?></dt>
+    <dd class="col-date col-time <?php echo esc_attr( $highlighted ); ?>"><?php echo esc_html( Dates::format($date_format, $io->getDate()) ); ?><br /><?php echo esc_html( $io->getFormattedTimeRange($time_format) ); ?></dd>
   <?php endforeach; ?>
 </dl>
 

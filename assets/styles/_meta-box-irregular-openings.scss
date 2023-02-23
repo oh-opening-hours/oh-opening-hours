@@ -9,10 +9,6 @@ table.op-irregular-openings {
 
     .col-remove {
       width:    10%;
-
-      .button-remove {
-        @include button-remove();
-      }
     }
   }
 }

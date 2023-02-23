@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const jshint = require("gulp-jshint");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
@@ -12,8 +12,8 @@ const del = require("del");
 
 const paths = {
   src: {
-    scripts: ["./includes/jquery-ui-timepicker/jquery.ui.timepicker.js", "./assets/scripts/**/*.js"],
-    styles: ["./assets/styles/main.scss", "./includes/jquery-ui-timepicker/jquery.ui.timepicker.css"]
+    scripts: ["./includes/flatpickr/flatpickr.min.js", "./assets/scripts/**/*.js"],
+    styles: ["./assets/styles/main.scss", "./includes/flatpickr/flatpickr.min.css"]
   },
   dest: {
     scripts: "./dist/scripts/",
@@ -80,7 +80,7 @@ const exportTask = gulp.series(clean, build, function() {
 
   return gulp
     .src(files)
-    .pipe(gulpZip("wp-opening-hours.zip"))
+    .pipe(gulpZip("oh-opening-hours.zip"))
     .pipe(gulp.dest("."));
 });
 

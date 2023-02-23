@@ -11,10 +11,6 @@ table.op-holidays {
 
   .col-remove {
     width: 10%;
-
-    .remove-holiday {
-      @include button-remove();
-    }
   }
 }
 

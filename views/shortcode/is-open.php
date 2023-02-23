@@ -22,17 +22,17 @@ extract( $this->data['attributes'] );
 echo $before_widget;
 
 if ( ! empty( $title ) ) {
-	echo $before_title . $title . $after_title;
+	echo $before_title . esc_html( $title ) . $after_title;
 }
 
-echo '<span class="' . $classes . '">' . $text . '</span>';
+echo '<span class="' . esc_attr( $classes ) . '">' . $text . '</span>';
 
 if ( !$is_open && isset($next_string) && is_string($next_string) ) {
-	echo '<span class="op-next-period ' . $next_period_classes . '">' . $next_string . '</span>';
+	echo '<span class="op-next-period ' . esc_attr( $next_period_classes ) . '">' . esc_html( $next_string ). '</span>';
 }
 
 if (isset($today_string) && is_string($today_string) && strlen($today_string) > 0) {
-  echo '<span class="op-today">'. $today_string .'</span>';
+	echo '<span class="op-today">'. esc_html( $today_string ) .'</span>';
 }
 
 echo $after_widget;

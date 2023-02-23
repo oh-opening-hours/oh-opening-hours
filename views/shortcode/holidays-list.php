@@ -30,7 +30,7 @@ if ( !count( $holidays ) )
 echo $before_widget;
 
 if ( ! empty( $title ) ) {
-	echo $before_title . $title . $after_title;
+	echo $before_title . esc_html( $title ) . $after_title;
 }
 
 ?>
@@ -40,8 +40,8 @@ if ( ! empty( $title ) ) {
     foreach ($holidays as $holiday) :
     $highlighted = ($highlight && $holiday->isActive()) ? $class_highlighted : '';
     ?>
-    <dt class="<?php echo $highlighted; ?>"><?php echo $holiday->getName(); ?></dt>
-    <dd class="<?php echo $highlighted; ?>"><?php echo $holiday->getFormattedDateRange($date_format); ?></dd>
+    <dt class="<?php echo esc_attr( $highlighted ); ?>"><?php echo esc_html( $holiday->getName() ); ?></dt>
+    <dd class="<?php echo esc_attr( $highlighted ); ?>"><?php echo esc_html( $holiday->getFormattedDateRange($date_format) ); ?></dd>
     <?php endforeach; ?>
 </dl>
 

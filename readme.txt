@@ -1,16 +1,19 @@
-=== Opening Hours ===
-Contributors: janizde
+=== O/H - Opening Hours ===
+Contributors: kirnbauer, janizde
 Tags: opening hours,business hours,hours,table,overview,date,time,widget,shortcode,status,currently open,bar,restaurant
-Tested up to: 5.7.2
-Stable tag: 2.3.0
-Requires at least: 4.0.0
-Donate link: https://github.com/janizde/WP-Opening-Hours#donate
+Tested up to: 6.1.1
+Stable tag: 1.0.0
+Requires at least: 5.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Opening Hours is a highly customizable WordPress plugin to set up your venue's opening hours and display them with Shortcodes and Widgets.
+The WordPress plugin "Opening Hours" offers extensive customization options for displaying your venue's operating hours through the use of Shortcodes and Widgets.
 
 == Description ==
+
+The Opening Hours plugin for WordPress offers several advanced features. Firstly, it supports multiple sets of opening hours, which you can use independently for different parts of your establishment (such as a restaurant and a bar). Secondly, it supports holidays, allowing you to set special opening hours for these occasions. Additionally, the plugin can handle irregular openings, such as different hours during the Christmas period.
+
+Moreover, the plugin allows you to create child sets that can overwrite your regular opening hours during specific periods, such as seasonal hours or an extra day every second week. Finally, the plugin provides four highly customizable widgets and shortcodes that can display contextual information, such as a message indicating when you will next be open if currently closed.
 
 * Supports multiple Sets of Opening Hours (e.g. one for your restaurant and one for your bar) that you can use independently.
 * Supports Holidays
@@ -94,104 +97,25 @@ If you found a bug you would like to fix feel free to [contribute to the project
 
 == Changelog ==
 
-= 2.3.0 =
-
-* Fix a bug that would cause redundant database writes caused by a DB_VERSION mismatch
-* Add filter `op_shortcode_template_path`
-* Deprecate filter `op_shortcode_template` in favor of `op_shortcode_template_path`
-* Consistently use en dashes to separate dates and times in default formats
-* Add filter `op_set_post_type_arguments`
-
-= 2.2.1 =
-
-* Add support for custom user locales in the admin panel for cases when the user locale differs from the site locale
-
-= 2.2.0 =
-
-* Added [op-schema] shortcode and Schema.org Widget for structured JSON-LD representation of opening hours, holidays and irregular openings
-* Added button for Shortcode Builder in Set edit page
-
-= 2.1.4 =
-
-* Fixed a warning occuring in the Overview shortcode with PHP >= 7.2
-* Added method `OpeningHours->clearSetProviders()` to `OpeningHours` singleton
-
-= 2.1.3 =
-
-* Fix concerning time formats of Irregular Openings and Periods when saving by @Braunson
-
-= 2.1.2 =
-
-* Fixed JavaScript conflicts with other plugins
-
-= 2.1.1 =
-
-* Fixed a bug that did not load the parent set's irregular openings and holidays in active child sets.
-* Fixed a bug that blocked irregular openings and periods on the days after irregular openings that go beyond midnight.
-
-= 2.1 =
-
-* Added today's opening hours in Is Open shortcode / widget
-* Automatically hide past Holidays and Irregular Openings in the respective shortcodes / widgets
-* Sort Holidays and Irregular Openings ascendingly by start date
-* Use WordPress shipped version of jquery-ui to prevent conflicts with other plugins
-* Merge dates of Holidays if they only span one day
-* Added offset option to Overview shortcode / widget
-* Added filters
-	* `op_is_open_format_next`
-	* `op_is_open_format_today`
-	* `op_overview_model`
-* Various bug fixes
-
-= 2.0.5 =
-
-* fixed bug concerning child set initialization. thanks to @nikomuse
-
-= 2.0.4 =
-
-* Added support for UTC offset timezones
-
-= 2.0.3 =
-
-* Fixed timezone bug in WordPress 4.7
-
-= 2.0.2 =
-
-* Fixed a bug that didn't show next open Period when there are no regular Periods but Irregular Openings in the current Set
-
-= 2.0.1 =
-
-* Added SetAlias functionality
-* Minor fixes including:
-    * Fixed mixed content error (@foomep)
-    * Fixed auto convert issue
-    * Fixed PHP 5.3 incompatibility issues
-
-= 2.0 =
-Completely new version of the Opening Hours plugin.
-Supports multiple Sets of Opening Hours and adds more flexibility to the Widgets and Shortcodes.
-Offers Developer APIs to easily integrate your custom sources.
-
-= 1.2 =
-Read this article:
-http://www.jannikportz.de/2014/01/19/update-1-2-for-opening-hours-plugin/
-
-= 1.1.1 =
-Read this article:
-http://www.jannikportz.de/2013/12/04/opening-hours-update-1-1-1/
-
-= 1.1 =
-Read this article:
-http://www.jannikportz.de/2013/11/03/opening-hours-update-version-1-2/
-
-= 1.0.1 =
-fixed a bug that displayed saturday instead of friday
-ATTENTION: REINSTALL NECESSARY!
-
-= 1.0 =
+= 1.0.0 =
 initial version
 
 == Upgrade Notice ==
 
 = 2.0 =
 The plugin has been rewritten from scratch and a lot has changed. Old data should be converted automatically but a lot of the CSS classes have changed. Take some time to update it and maybe test it in a development environment to make sure it works as expected. Requires PHP >= 5.3, WordPress >= 4
+
+
+== Credits ==
+
+Opening Hours is based on the original plugin by Jannik Portz. The new release also includes work by several other people:
+•	Daniel Mester Pirttijärvi (Jdenticon),
+•	Shamus Young (Wavatars),
+•	Andreas Gohr (the original MonsterID and RingIcon),
+•	Scott Sherrill-Mix & Katherine Garner (the hand-drawn monster update)
+•	Benjamin Laugueux (Identicon),
+•	David Revoy (Bird and Cat Avatars),
+•	Zikri Kader, Colin Davis & Nimiq (RoboHash), and
+•	Johanna Amann (the Avatar Privacy icon).
+https://wordpress.org/plugins/avatar-privacy/
+

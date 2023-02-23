@@ -1,4 +1,4 @@
-(function($) {
+jQuery(function($) {
   $.fn.opPeriodsDay = function() {
     return this.each(function(index, element) {
       var wrap = $(element);
@@ -32,20 +32,28 @@
       var wrap = $(element);
 
       var btnDeletePeriod = wrap.find(".delete-period");
-      var inputs_tp = wrap.find(".input-timepicker");
+      var inputTimeStart = wrap.find(".input-time-start");
+      var inputTimeEnd = wrap.find(".input-time-end");
+    
+      inputTimeStart.flatpickr({
+        enableTime: true,
+        time_24hr: true,
+        noCalendar: true,
+        dateFormat: "H:i"
+      });
+    
+      inputTimeEnd.flatpickr({
+        enableTime: true,
+        time_24hr: true,
+        noCalendar: true,
+        dateFormat: "H:i"
+      });
+      
 
       btnDeletePeriod.click(function() {
         wrap.remove();
       });
 
-      inputs_tp.timepicker({
-        hourText: translations.tp_hour,
-        minuteText: translations.tp_minute
-      });
-
-      inputs_tp.focus(function() {
-        inputs_tp.blur();
-      });
     });
   };
 
@@ -54,4 +62,4 @@
     form.find("tr.periods-day").opPeriodsDay();
     form.find("tr.period").opSinglePeriod();
   });
-})(jQuery);
+});

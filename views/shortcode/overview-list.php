@@ -23,7 +23,7 @@ extract( $this->data['attributes'] );
 echo $before_widget;
 
 if ( $title ) {
-  echo $before_title . $title . $after_title;
+  echo $before_title . esc_html( $title ) . $after_title;
 }
 
 $description = $set->getDescription();
@@ -31,12 +31,12 @@ $description = $set->getDescription();
 
 <dl class="op-list op-list-overview">
   <?php if ($show_description && !empty($description)) : ?>
-    <dt class="op-cell op-cell-description"><?php echo $description; ?></dt>
+    <dt class="op-cell op-cell-description"><?php echo esc_html( $description ); ?></dt>
   <?php endif; ?>
 
   <?php foreach ($days as $dayData) : ?>
-    <dt class="op-cell op-cell-heading <?php echo $dayData['highlightedDayClass']; ?>"><?php echo $dayData['dayCaption']; ?></dt>
-    <dd class="op-cell op-cell-periods <?php echo $dayData['highlightedDayClass']; ?>"><?php echo $dayData['periodsMarkup']; ?></dd>
+    <dt class="op-cell op-cell-heading <?php echo esc_attr( $dayData['highlightedDayClass'] ); ?>"><?php echo $dayData['dayCaption']; ?></dt>
+    <dd class="op-cell op-cell-periods <?php echo esc_attr( $dayData['highlightedDayClass'] ); ?>"><?php echo $dayData['periodsMarkup']; ?></dd>
   <?php endforeach; ?>
 </dl>
 

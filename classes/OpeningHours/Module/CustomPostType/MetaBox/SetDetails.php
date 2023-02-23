@@ -37,7 +37,7 @@ class SetDetails extends AbstractMetaBox {
   public function __construct() {
     parent::__construct(
       'op_meta_box_set_details',
-      __('Set Details', 'wp-opening-hours'),
+      __('Set Details', 'oh-opening-hours'),
       self::CONTEXT_SIDE,
       self::PRIORITY_HIGH
     );
@@ -50,12 +50,12 @@ class SetDetails extends AbstractMetaBox {
       array(
         'type' => 'textarea',
         'name' => 'description',
-        'caption' => __('Description', 'wp-opening-hours')
+        'caption' => __('Description', 'oh-opening-hours'),
       ),
       array(
         'type' => 'text',
         'name' => 'dateStart',
-        'caption' => __('Date Start', 'wp-opening-hours'),
+        'caption' => __('Date Start', 'oh-opening-hours'),
         'show_when' => 'child',
         'attributes' => array(
           'class' => 'op-criteria-date-start op-date-input'
@@ -64,7 +64,7 @@ class SetDetails extends AbstractMetaBox {
       array(
         'type' => 'text',
         'name' => 'dateEnd',
-        'caption' => __('Date End', 'wp-opening-hours'),
+        'caption' => __('Date End', 'oh-opening-hours'),
         'show_when' => 'child',
         'attributes' => array(
           'class' => 'op-criteria-date-end op-date-input'
@@ -73,19 +73,19 @@ class SetDetails extends AbstractMetaBox {
       array(
         'type' => 'select',
         'name' => 'weekScheme',
-        'caption' => __('Week Scheme', 'wp-opening-hours'),
+        'caption' => __('Week Scheme', 'oh-opening-hours'),
         'options' => array(
-          'all' => __('Every week', 'wp-opening-hours'),
-          'even' => __('Even weeks only', 'wp-opening-hours'),
-          'odd' => __('Odd weeks only', 'wp-opening-hours')
+          'all' => __('Every week', 'oh-opening-hours'),
+          'even' => __('Even weeks only', 'oh-opening-hours'),
+          'odd' => __('Odd weeks only', 'oh-opening-hours')
         ),
         'show_when' => 'child'
       ),
       array(
         'type' => 'text',
         'name' => 'alias',
-        'caption' => __('Set Alias', 'wp-opening-hours'),
-        'description' => __('Use an alias instead of the Set ID in shortcodes', 'wp-opening-hours'),
+        'caption' => __('Set Alias', 'oh-opening-hours'),
+        'description' => __('Use an alias instead of the Set ID in shortcodes', 'oh-opening-hours'),
         'datalist' => function () use ($filterAliasPrefix) {
           return (array) apply_filters($filterAliasPrefix, array());
         },
@@ -94,10 +94,10 @@ class SetDetails extends AbstractMetaBox {
       array(
         'type' => 'heading',
         'name' => 'childSetNotice',
-        'heading' => __('Add a Child-Set', 'wp-opening-hours'),
+        'heading' => __('Add a Child-Set', 'oh-opening-hours'),
         'description' => __(
           'You may add a child set that overwrites the parent Opening Hours in a specific time range. Choose a parent set under "Attributes".',
-          'wp-opening-hours'
+          'oh-opening-hours'
         ),
         'show_when' => 'parent'
       )
@@ -128,9 +128,9 @@ class SetDetails extends AbstractMetaBox {
     $builderUrl = $this->createShortcodeBuilderUrl($post);
 
     echo '<p>';
-    echo '<h3>' . __('Set Id', 'wp-opening-hours') . ': <code>' . $post->ID . '</code></h3>';
+    echo '<h3>' . __('Set Id', 'oh-opening-hours') . ': <code>' . $post->ID . '</code></h3>';
     // prettier-ignore
-    echo '<a class="op-generate-sc-link" data-shortcode-builder-url="' . $builderUrl . '" href="' . $builderUrl . '" target="_blank">' . __('Create a Shortcode', 'wp-opening-hours') . '</a>';
+    echo '<a class="op-generate-sc-link" data-shortcode-builder-url="' . $builderUrl . '" href="' . $builderUrl . '" target="_blank">' . __('Create a Shortcode', 'oh-opening-hours') . '</a>';
     echo '</h3>';
 
     $type = $post->post_parent == 0 ? 'parent' : 'child';
@@ -151,7 +151,7 @@ class SetDetails extends AbstractMetaBox {
       return;
     }
 
-    $data = $_POST[$this->id];
+    $data = isset($_POST[$this->id]) ? $_POST[$this->id]: '' ;
     foreach ($this->fields as $field) {
       $value = array_key_exists($field['name'], $data) ? $data[$field['name']] : null;
       $this->persistence->putValue($field['name'], $value, $post_id);

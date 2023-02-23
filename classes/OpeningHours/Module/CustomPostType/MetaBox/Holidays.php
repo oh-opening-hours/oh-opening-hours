@@ -25,7 +25,7 @@ class Holidays extends AbstractMetaBox {
   public function __construct() {
     parent::__construct(
       'op_meta_box_holidays',
-      __('Holidays', 'wp-opening-hours'),
+      __('Holidays', 'oh-opening-hours'),
       self::CONTEXT_ADVANCED,
       self::PRIORITY_HIGH
     );
@@ -52,7 +52,7 @@ class Holidays extends AbstractMetaBox {
       'holidays' => $set->getHolidays()
     );
 
-    $vr = new ViewRenderer(op_view_path(self::TEMPLATE_PATH), $variables);
+    $vr = new ViewRenderer(op_view_dir_path(self::TEMPLATE_PATH), $variables);
     $vr->render();
   }
 
@@ -68,7 +68,7 @@ class Holidays extends AbstractMetaBox {
       'dateEnd' => $holiday->isDummy() ? '' : $holiday->getEnd()->format(Dates::STD_DATE_FORMAT)
     );
 
-    $vr = new ViewRenderer(op_view_path(self::TEMPLATE_PATH_SINGLE), $data);
+    $vr = new ViewRenderer(op_view_dir_path(self::TEMPLATE_PATH_SINGLE), $data);
     $vr->render();
   }
 

@@ -1,4 +1,4 @@
-# <a name="filters"></a>Filters
+ <a name="filters"></a>Filters
 The Widget offers some Filters you can hook into in your custom theme or plugin.
 Mind that every Widget internally uses the corresponding Shortcode **so these filters will work for both Widgets and Shortcodes.**
 

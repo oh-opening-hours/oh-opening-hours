@@ -8,6 +8,7 @@
  *
  * @deprecated  Use OpeningHours\Entity\Set::isOpen() instead
  */
+
 function is_open($return_type = false) {
   $posts = get_posts(array(
     'post_type' => \OpeningHours\Module\CustomPostType\Set::CPT_SLUG,

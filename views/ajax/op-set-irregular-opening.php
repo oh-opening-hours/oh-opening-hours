@@ -15,26 +15,22 @@ $timeEnd = ( $io->isDummy() ) ? null : $io->getEnd()->format( Dates::STD_TIME_FO
 
 <tr class="op-irregular-opening">
   <td class="col-name">
-    <input type="text" class="widefat name"
-           name="<?php echo MetaBox::POST_KEY; ?>[name][]" value="<?php echo $name; ?>">
+    <input type="text" class="widefat name" name="<?php echo sanitize_text_field(MetaBox::POST_KEY); ?>[name][]" value="<?php echo sanitize_text_field($name); ?>" >
   </td>
 
   <td class="col-date">
-    <input type="text" class="widefat date input-gray"
-           name="<?php echo MetaBox::POST_KEY; ?>[date][]" value="<?php echo $date; ?>">
+    <input type="text" class="widefat date input-gray" name="<?php echo sanitize_text_field(MetaBox::POST_KEY); ?>[date][]" value="<?php echo sanitize_text_field($date); ?>">
   </td>
 
   <td class="col-time-start">
-    <input type="text" class="widefat time-start input-timepicker input-gray"
-           name="<?php echo MetaBox::POST_KEY; ?>[timeStart][]" value="<?php echo $timeStart; ?>">
+    <input type="text" class="widefat time-start input-timepicker input-gray" name="<?php echo sanitize_text_field(MetaBox::POST_KEY); ?>[timeStart][]" value="<?php echo sanitize_text_field($timeStart); ?>">
   </td>
 
   <td class="col-time-end">
-    <input type="text" class="widefat time-end input-timepicker input-gray"
-           name="<?php echo MetaBox::POST_KEY; ?>[timeEnd][]" value="<?php echo $timeEnd; ?>">
+    <input type="text" class="widefat time-end input-timepicker input-gray" name="<?php echo sanitize_text_field(MetaBox::POST_KEY); ?>[timeEnd][]" value="<?php echo sanitize_text_field($timeEnd); ?>">
   </td>
 
   <td class="col-remove">
-    <button class="button button-remove remove-io has-icon"><i class="dashicons dashicons-no-alt"></i></button>
+    <button class="components-button is-destructive remove-io has-icon"><i class="dashicons dashicons-no-alt"></i></button>
   </td>
 </tr>

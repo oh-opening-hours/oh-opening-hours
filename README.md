@@ -62,7 +62,7 @@ Opening Hours is a highly customizable WordPress plugin to set up your venue's o
 1. Activate the Plugin
 
 ### <a name="manual-installation"></a>Manual Installation
-1. Download the .zip-archive from <https://wordpress.org/plugins/wp-opening-hours/>
+1. Download the .zip-archive from <https://wordpress.org/plugins/kk-opening-hours/>
 1. Unzip the archive
 1. Upload the directory /opening-hours to your wp-content/plugins
 1. In your Admin Panel go to Plugins and active the Opening Hours Plugin
@@ -87,7 +87,7 @@ Add the Opening Hours plugin as dependency
 
 ~~~json
 "require": {
-  "wpackagist-plugin/wp-opening-hours": "1.2"
+  "wpackagist-plugin/kk-opening-hours": "1.2"
 }
 ~~~
 
@@ -1013,10 +1013,10 @@ However, you can still submit your translations to [Polyglots](#polyglots) so ot
 
 The translations of weekdays are not included in the Plugin translations but are loaded from the WordPress core translations. This serves the purpose, that these are always translated to the language that your WordPress installation runs on independently of the Plugin translation progress.
 
-#### <a name="polyglots"></a>[WordPress Polyglots](https://translate.wordpress.org/projects/wp-plugins/wp-opening-hours)
+#### <a name="polyglots"></a>[WordPress Polyglots](https://translate.wordpress.org/projects/wp-plugins/kk-opening-hours)
 Polyglots is the name of the community of volunteers translating WordPress resources like Themes, Plugins and also the WordPress core. It has become a central place for WordPress translation and is tightly coupled with the WordPress Theme/Plugin repositories.
 
-Since version 2.0 the translation of the Opening Hours Plugin takes place at [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/wp-opening-hours). Advantages of using Polyglots:
+Since version 2.0 the translation of the Opening Hours Plugin takes place at [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/kk-opening-hours). Advantages of using Polyglots:
 
 * Larger translation community
 * Translation can be separated from the actual development of the Plugin
@@ -1025,7 +1025,7 @@ Since version 2.0 the translation of the Opening Hours Plugin takes place at [tr
 If you want to contribute to translations and there is no Project Translation Editor for your locale, please drop me a message or open an issue with your WordPress.org username and I will request an editorship for your locale.  
 You can find out more about project translation roles [here.](https://make.wordpress.org/polyglots/handbook/about/teams/)  
 
-If you have already translated the Plugin on translate.jannikportz.de, I have transferred all translations to the [translate.wordpress.org project](https://translate.wordpress.org/projects/wp-plugins/wp-opening-hours).
+If you have already translated the Plugin on translate.jannikportz.de, I have transferred all translations to the [translate.wordpress.org project](https://translate.wordpress.org/projects/wp-plugins/kk-opening-hours).
 You will then also need to become a Project Translation Editor to approve your translations (I know this is a bit tedious).
 So in this case please also drop me a message or open an issue with your WordPress.org account name.
 
@@ -1034,7 +1034,7 @@ If you can not translate the whole plugin or don't want to wait until everything
 1. Select the translation set in the list of available languages.
 1. Scroll to the bottom.
 1. In the line below the legend, select `all current` as `Machine Object Message (.mo)` and click `Export`.
-1. Rename the file to `wp-opening-hours-{locale}.mo` (replace `{locale}` with the actual locale of the translation, e.g. `de_DE` for German).
+1. Rename the file to `kk-opening-hours-{locale}.mo` (replace `{locale}` with the actual locale of the translation, e.g. `de_DE` for German).
 1. Move the file to `/path/to/wordpress/wp-content/languages/plugins`
 
 #### Pull Request on GitHub
@@ -1125,12 +1125,19 @@ Completely new Plugin. When Updating you will have to set up your Opening Hours 
 
 [↑ Table of Contents](#contents)
 
-## <a name="donate"></a> Donate
-I'd be very pleased if you donated a small amount if you like the plugin as I put much effort and much of my free time into the development
-of this plugin.  
-You can donate via:
+## <a name="credits"></a> Credits
+Avatar Privacy is based on the original plugin by (Jannik Portz)[]. The new release also includes work by several other people:
+•	Daniel Mester Pirttijärvi (Jdenticon),
+•	Shamus Young (Wavatars),
+•	Andreas Gohr (the original MonsterID and RingIcon),
+•	Scott Sherrill-Mix & Katherine Garner (the hand-drawn monster update)
+•	Benjamin Laugueux (Identicon),
+•	David Revoy (Bird and Cat Avatars),
+•	Zikri Kader, Colin Davis & Nimiq (RoboHash), and
+•	Johanna Amann (the Avatar Privacy icon).
+https://wordpress.org/plugins/avatar-privacy/
 
-PayPal: [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FYGR6EJSN8S8)
+
 
 ## <a name="license"></a>License
 Copyright &copy; 2016 Jannik Portz

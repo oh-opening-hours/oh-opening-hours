@@ -13,4 +13,4 @@
   $(document).ready(function () {
     $('.op-generate-sc-link').opShortcodeBuilderLink();
   });
-})(jQuery);
+});

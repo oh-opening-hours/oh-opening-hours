@@ -26,7 +26,6 @@ jQuery.fn.opHolidays = function() {
       var newHoliday = jQuery(response).clone();
 
       newHoliday.opSingleHoliday();
-
       holidaysWrap.append(newHoliday);
     });
   }
@@ -64,35 +63,20 @@ jQuery.fn.opSingleHoliday = function() {
     remove();
   });
 
-  inputDateStart.datepicker({
-    dateFormat: "yy-mm-dd",
-    firstDay: openingHoursData.startOfWeek || 0,
-    dayNames: openingHoursData.weekdays.full,
-    dayNamesMin: openingHoursData.weekdays.short,
-    dayNamesShort: openingHoursData.weekdays.short,
-    onClose: function(date) {
-      inputDateEnd.datepicker("option", "minDate", date);
+  inputDateStart.flatpickr({
+    dateFormat: "Y-m-d",
+    onChange: function (selectedDates, dateStr, instance) {
+      inputDateEnd.flatpickr().set("minDate", dateStr);
     }
   });
 
-  inputDateEnd.datepicker({
-    dateFormat: "yy-mm-dd",
-    firstDay: openingHoursData.startOfWeek || 0,
-    dayNames: openingHoursData.weekdays.full,
-    dayNamesMin: openingHoursData.weekdays.short,
-    dayNamesShort: openingHoursData.weekdays.short,
-    onClose: function(date) {
-      inputDateStart.datepicker("option", "maxDate", date);
+  inputDateEnd.flatpickr({
+    dateFormat: "Y-m-d",
+    onChange: function (selectedDates, dateStr, instance) {
+      inputDateStart.flatpickr().set("maxDate", dateStr);
     }
   });
 
-  inputDateStart.focus(function() {
-    inputDateStart.blur();
-  });
-
-  inputDateEnd.focus(function() {
-    inputDateEnd.blur();
-  });
 };
 
 /**

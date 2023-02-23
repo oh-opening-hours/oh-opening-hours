@@ -17,26 +17,26 @@ $irregular_openings = $this->data['irregular_openings'];
 	<table class="op-irregular-openings" id="op-io-table">
 		<thead>
 		<th>
-			<?php _e( 'Name', 'wp-opening-hours' ); ?>
+			<?php esc_html_e( 'Name', 'oh-opening-hours' ); ?>
 		</th>
 
 		<th>
-			<?php _e( 'Date', 'wp-opening-hours' ); ?>
+			<?php esc_html_e( 'Date', 'oh-opening-hours' ); ?>
 		</th>
 
 		<th>
-			<?php _e( 'Time Start', 'wp-opening-hours' ); ?>
+			<?php esc_html_e( 'Time Start', 'oh-opening-hours' ); ?>
 		</th>
 
 		<th>
-			<?php _e( 'Time End', 'wp-opening-hours' ); ?>
+			<?php esc_html_e( 'Time End', 'oh-opening-hours' ); ?>
 		</th>
 		</thead>
 
 		<tbody>
 		<?php
 		foreach ($irregular_openings as $io) {
-			$view = new ViewRenderer(op_view_path(MetaBox::TEMPLATE_PATH_SINGLE), array(
+			$view = new ViewRenderer(op_view_dir_path(MetaBox::TEMPLATE_PATH_SINGLE), array(
 				'io' => $io
 			));
 			$view->render();
@@ -46,7 +46,7 @@ $irregular_openings = $this->data['irregular_openings'];
 	</table>
 
 	<button class="button button-primary button-add add-io">
-		<?php _e( 'Add New Irregular Opening', 'wp-opening-hours' ); ?>
+		<?php esc_html_e( 'Add New Irregular Opening', 'oh-opening-hours' ); ?>
 	</button>
 
 </div>

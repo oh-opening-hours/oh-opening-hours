@@ -24,7 +24,7 @@ class OpeningHours extends AbstractMetaBox {
   public function __construct() {
     parent::__construct(
       'op_meta_box_opening_hours',
-      __('Opening Hours', 'wp-opening-hours'),
+      __('Opening Hours', 'oh-opening-hours'),
       self::CONTEXT_ADVANCED,
       self::PRIORITY_HIGH
     );
@@ -35,7 +35,7 @@ class OpeningHours extends AbstractMetaBox {
     $set = $this->getSet($post->ID);
     $periods = $this->groupPeriodsWithDummy($set->getPeriods()->getArrayCopy());
 
-    $vr = new ViewRenderer(op_view_path(self::TEMPLATE_PATH), array(
+    $vr = new ViewRenderer(op_view_dir_path(self::TEMPLATE_PATH), array(
       'periods' => $periods,
       'set' => $set
     ));
@@ -44,7 +44,7 @@ class OpeningHours extends AbstractMetaBox {
 
   /** @inheritdoc */
   protected function saveData($post_id, WP_Post $post, $update) {
-    $config = $_POST['opening-hours'];
+    $config = isset($_POST['opening-hours']) ? $_POST['opening-hours']: '' ;;
 
     if (!is_array($config)) {
       $config = array();

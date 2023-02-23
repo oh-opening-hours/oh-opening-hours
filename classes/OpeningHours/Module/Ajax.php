@@ -44,9 +44,9 @@ class Ajax extends AbstractModule {
 
   /** Action: Render Single Period */
   public static function renderSinglePeriod() {
-    $weekday = (int) $_POST['weekday'];
-    $timeStart = $_POST['timeStart'];
-    $timeEnd = $_POST['timeEnd'];
+    $weekday = isset($_POST['weekday']) ? (int) $_POST['weekday']: '' ;
+    $timeStart = isset($_POST['timeStart']) ? $_POST['timeStart']: '' ;
+    $timeEnd = isset($_POST['timeEnd']) ? $_POST['timeEnd']: '' ;
     $config = array(
       'weekday' => $weekday
     );
@@ -55,7 +55,7 @@ class Ajax extends AbstractModule {
     $config['timeEnd'] = Dates::isValidTime($timeEnd) ? $timeEnd : '00:00';
     $period = new Period($config['weekday'], $config['timeStart'], $config['timeEnd']);
 
-    $vr = new ViewRenderer(op_view_path(OpeningHoursMetaBox::TEMPLATE_PATH_SINGLE), array(
+    $vr = new ViewRenderer(op_view_dir_path(OpeningHoursMetaBox::TEMPLATE_PATH_SINGLE), array(
       'period' => $period
     ));
 
@@ -73,7 +73,7 @@ class Ajax extends AbstractModule {
 
   /** Action: Render Single Dummy Irregular Opening */
   public static function renderSingleDummyIrregularOpening() {
-    $view = new ViewRenderer(op_view_path(IrregularOpenings::TEMPLATE_PATH_SINGLE), array(
+    $view = new ViewRenderer(op_view_dir_path(IrregularOpenings::TEMPLATE_PATH_SINGLE), array(
       'io' => IrregularOpening::createDummy()
     ));
 

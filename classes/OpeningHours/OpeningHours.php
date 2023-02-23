@@ -30,7 +30,7 @@ class OpeningHours extends AbstractModule {
   protected $widgets;
 
   /** The plugin version */
-  const VERSION = '2.3.0';
+  const VERSION = '1.0.0';
 
   /** The Plugin DB version */
   const DB_VERSION = '2';
@@ -98,7 +98,7 @@ class OpeningHours extends AbstractModule {
   }
 
   public function loadResources() {
-    wp_register_style(self::PREFIX . 'css', plugins_url('dist/styles/main.css', op_bootstrap_file()));
+    wp_register_style(self::PREFIX . 'css', plugins_url('dist/styles/main.css', op_bootstrap_file_path()));
 
     $useFrontEndStyles = apply_filters(self::FILTER_USE_FRONT_END_STYLES, true);
 
@@ -117,8 +117,8 @@ class OpeningHours extends AbstractModule {
       ) {
         wp_register_script(
           self::PREFIX . 'js',
-          plugins_url('dist/scripts/main.js', op_bootstrap_file()),
-          array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker'),
+          plugins_url('dist/scripts/main.js', op_bootstrap_file_path()),
+          array('jquery', 'jquery-ui-core'),
           self::VERSION,
           true
         );
@@ -128,12 +128,12 @@ class OpeningHours extends AbstractModule {
           'startOfWeek' => (int) Dates::getStartOfWeek(),
           'weekdays' => Weekdays::getDatePickerTranslations(),
           'translations' => array(
-            'moreSettings' => __('More Settings', 'wp-opening-hours'),
-            'fewerSettings' => __('Fewer Settings', 'wp-opening-hours')
+            'moreSettings' => __('More Settings', 'oh-opening-hours'),
+            'fewerSettings' => __('Fewer Settings', 'oh-opening-hours')
           )
         ));
 
-        wp_localize_script(self::PREFIX . 'js', 'translations', Module\I18n::getJavascriptTranslations());
+//        wp_localize_script(self::PREFIX . 'js', 'translations', Module\I18n::getJavascriptTranslations());
 
         wp_enqueue_script(self::PREFIX . 'js');
       }

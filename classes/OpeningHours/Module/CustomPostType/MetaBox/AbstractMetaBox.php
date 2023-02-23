@@ -92,7 +92,7 @@ abstract class AbstractMetaBox extends AbstractModule {
       return false;
     }
 
-    $nonceValue = $_POST[$values['name']];
+    $nonceValue = isset($_POST[$values['name']]) ? $_POST[$values['name']]: '' ;
     return wp_verify_nonce($nonceValue, $values['action']);
   }
 
