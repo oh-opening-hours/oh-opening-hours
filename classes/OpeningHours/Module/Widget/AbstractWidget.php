@@ -167,7 +167,7 @@ abstract class AbstractWidget extends WP_Widget {
    */
   public static function getPhpDateFormatInfo() {
     return sprintf(
-      '<a href="http://bit.ly/16Wsegh" target="blank">%s</a>',
+      '<a href="https://www.php.net/manual/function.date.php" target="blank">%s</a>',
       __('More about PHP date and time formats.', 'oh-opening-hours')
     );
   }

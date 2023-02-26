@@ -82,7 +82,7 @@ class OpeningHours extends AbstractMetaBox {
           $period = new Period($weekday, $dayConfig['start'][$i], $dayConfig['end'][$i]);
           $periods[] = $period;
         } catch (\InvalidArgumentException $e) {
-          trigger_error(sprintf('Period could not be saved due to: %s', $e->getMessage()));
+          trigger_error(sprintf('Period could not be saved due to: %s', esc_html($e->getMessage())));
         }
       }
     }

@@ -73,7 +73,7 @@ class Persistence {
         $period = new Period((int) $data['weekday'], $data['timeStart'], $data['timeEnd']);
         $periods[] = $period;
       } catch (InvalidArgumentException $e) {
-        trigger_error(sprintf('Could not load a period due to: %s', $e->getMessage()));
+        trigger_error(sprintf('Could not load a period due to: %s', esc_html($e->getMessage())));
       }
     }
 
@@ -113,7 +113,7 @@ class Persistence {
         $holiday = new Holiday($data['name'], new DateTime($data['dateStart']), new DateTime($data['dateEnd']));
         $holidays[] = $holiday;
       } catch (InvalidArgumentException $e) {
-        trigger_error(sprintf('Could not load holiday due to: %s', $e->getMessage()));
+        trigger_error(sprintf('Could not load holiday due to: %s', esc_html($e->getMessage())));
       }
     }
 
@@ -158,7 +158,7 @@ class Persistence {
         $io = new IrregularOpening($data['name'], $data['date'], $data['timeStart'], $data['timeEnd']);
         $ios[] = $io;
       } catch (InvalidArgumentException $e) {
-        trigger_error(sprintf('Could not load Irregular Opening due to: %s', $e->getMessage()));
+        trigger_error(sprintf('Could not load Irregular Opening due to: %s', esc_html($e->getMessage())));
       }
     }
 

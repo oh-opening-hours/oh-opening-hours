@@ -89,7 +89,7 @@ class Ajax extends AbstractModule {
    */
   public static function registerAjaxAction($hook, $method) {
     if (!method_exists(__CLASS__, $method)) {
-      self::terminate(sprintf('Ajax method %s does not exist', $method));
+      self::terminate(sprintf('Ajax method %s does not exist', esc_html($method)));
     }
 
     $callback = array(__CLASS__, $method);

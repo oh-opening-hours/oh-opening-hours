@@ -133,13 +133,13 @@ class Overview extends AbstractShortcode {
             ($period->isOpenOnAny($row['days'], $set) ? $attributes['highlighted_period_class'] : '');
           $markup .= sprintf(
             '<span class="op-period-time %s">%s</span>',
-            $highlightedPeriod,
+            esc_attr($highlightedPeriod),
             $period->getFormattedTimeRange($attributes['time_format'])
           );
         }
         $dayData['periodsMarkup'] = $markup;
       } else {
-        $dayData['periodsMarkup'] = '<span class="op-closed">' . $attributes['caption_closed'] . '</span>';
+        $dayData['periodsMarkup'] = '<span class="op-closed">' . esc_html($attributes['caption_closed']) . '</span>';
       }
 
       $days[] = $dayData;
@@ -170,12 +170,12 @@ class Overview extends AbstractShortcode {
         ? $attributes['highlighted_period_class']
         : null;
 
-    $markup .= sprintf('<span class="op-period-time irregular-opening %s">%s</span>', $highlighted, $heading);
+    $markup .= sprintf('<span class="op-period-time irregular-opening %s">%s</span>', esc_attr($highlighted), esc_html($heading));
 
     $time_start = $io->getStart()->format($attributes['time_format']);
     $time_end = $io->getEnd()->format($attributes['time_format']);
 
-    $markup .= sprintf('<span class="op-period-time %s">%s – %s</span>', $highlighted, $time_start, $time_end);
+    $markup .= sprintf('<span class="op-period-time %s">%s – %s</span>', esc_attr($highlighted), $time_start, $time_end);
     return $markup;
   }
 
@@ -186,6 +186,6 @@ class Overview extends AbstractShortcode {
    * @return    string              The holiday markup
    */
   public static function renderHoliday(Holiday $holiday) {
-    return '<span class="op-period-time op-closed holiday">' . $holiday->getName() . '</span>';
+    return '<span class="op-period-time op-closed holiday">' . esc_html($holiday->getName()) . '</span>';
   }
 }

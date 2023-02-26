@@ -98,12 +98,12 @@ class OpeningHours extends AbstractModule {
   }
 
   public function loadResources() {
-    wp_register_style(self::PREFIX . 'css', plugins_url('dist/styles/main.css', op_bootstrap_file_path()));
+    wp_register_style(self::PREFIX . 'frontendcss', plugins_url('dist/styles/main.css', op_bootstrap_file_path()));
 
     $useFrontEndStyles = apply_filters(self::FILTER_USE_FRONT_END_STYLES, true);
 
-    if (is_admin() || $useFrontEndStyles) {
-      wp_enqueue_style(self::PREFIX . 'css');
+    if ($useFrontEndStyles) {
+      wp_enqueue_style(self::PREFIX . 'frontendcss');
     }
 
     if (is_admin() && function_exists('get_current_screen')) {
@@ -115,6 +115,9 @@ class OpeningHours extends AbstractModule {
           ($screen->base === 'edit' && $screen->post_type === Module\CustomPostType\Set::CPT_SLUG) ||
           $screen->base === 'widgets')
       ) {
+        wp_register_style(self::PREFIX . 'backendcss', plugins_url('dist/admin/styles/main.css', op_bootstrap_file_path()));
+        wp_enqueue_style(self::PREFIX . 'backendcss');
+
         wp_register_script(
           self::PREFIX . 'js',
           plugins_url('dist/scripts/main.js', op_bootstrap_file_path()),

@@ -94,11 +94,11 @@ class Schema extends AbstractShortcode {
     );
 
     if (!empty($name)) {
-      $schema['name'] = $name;
+      $schema['name'] = esc_html($name);
     }
 
     if (!empty($description)) {
-      $schema['description'] = $description;
+      $schema['description'] = esc_html($description);
     }
 
     $schema['openingHoursSpecification'] = $generator->createOpeningHoursSpecificationEntries();

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "WordPress Plugin for managing Opening Hours, Holidays and Irregular Openings",
   "dependencies": {
+    "@wordpress/components": "^23.4.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -41,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/oh-opening-hours/oh-opening-hours/issues"
   },
-  "homepage": "https://github.com/oh-opening-hours/oh-opening-hours"
+  "homepage": "https://github.com/oh-opening-hours/oh-opening-hours",
+  "devDependencies": {
+    "@wordpress/base-styles": "^4.18.0"
+  }
 }

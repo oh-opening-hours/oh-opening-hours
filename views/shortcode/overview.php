@@ -37,7 +37,7 @@ $description = $set->getDescription();
   <?php endif; ?>
 
   <?php foreach ($days as $dayData) : ?>
-  <tr class="op-row op-row-day <?php echo esc_html( $dayData['highlightedDayClass'] ); ?>">
+  <tr class="op-row op-row-day <?php echo esc_attr( $dayData['highlightedDayClass'] ); ?>">
     <th class="op-cell op-cell-heading" scope="row"><?php echo $dayData['dayCaption']; ?></th>
     <td class="op-cell op-cell-periods"><?php echo $dayData['periodsMarkup']; ?></td>
   </tr>

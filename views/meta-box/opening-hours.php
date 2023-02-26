@@ -16,12 +16,12 @@ MetaBox::getInstance()->nonceField();
 			?>
 			<tr class="periods-day">
 				<td class="col-name" valign="top">
-					<?php echo $weekday->getName(); ?>
+					<?php echo esc_html($weekday->getName()); ?>
 				</td>
 
 				<td class="col-times" colspan="2" valign="top">
 					<div class="period-container" data-day="<?php echo $weekday->getIndex(); ?>"
-						data-set="<?php echo $this->data['set']->getId(); ?>">
+						data-set="<?php echo esc_attr($this->data['set']->getId()); ?>">
 
 						<table class="period-table">
 							<tbody>

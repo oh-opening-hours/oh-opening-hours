@@ -13,11 +13,13 @@ const del = require("del");
 const paths = {
   src: {
     scripts: ["./includes/flatpickr/flatpickr.min.js", "./assets/scripts/**/*.js"],
-    styles: ["./assets/styles/main.scss", "./includes/flatpickr/flatpickr.min.css"]
+    styles: ["./assets/styles/main.scss", "./includes/flatpickr/flatpickr.min.css"],
+    backendstyles : ["./assets/styles/admin.scss"]
   },
   dest: {
     scripts: "./dist/scripts/",
-    styles: "./dist/styles/"
+    styles: "./dist/styles/",
+    backendstyles: "./dist/admin/styles/"
   }
 };
 
@@ -44,11 +46,24 @@ function styles() {
     .pipe(gulp.dest(paths.dest.styles));
 }
 
-const build = gulp.parallel(styles, scripts);
+function backendstyles() {
+  return gulp
+    .src(paths.src.backendstyles)
+    .pipe(sourcemaps.init())
+    .pipe(gulpIf("*.scss", sass()))
+    .pipe(concat("main.css"))
+    .pipe(autoprefixer())
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest(paths.dest.backendstyles));
+}
+
+const build = gulp.parallel(backendstyles, styles, scripts);
 
 const watch = gulp.series(build, function() {
   gulp.watch(paths.src.scripts, scripts);
   gulp.watch(paths.src.styles, styles);
+  gulp.watch(paths.src.backendstyles, backendstyles);
 });
 
 function clean() {
@@ -86,6 +101,7 @@ const exportTask = gulp.series(clean, build, function() {
 
 exports.scripts = scripts;
 exports.styles = styles;
+exports.backendstyles = backendstyles;
 exports.export = exportTask;
 exports.clean = clean;
 exports.build = build;

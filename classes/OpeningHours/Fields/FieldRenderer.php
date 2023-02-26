@@ -72,7 +72,7 @@ class FieldRenderer {
         if (array_key_exists('datalist', $field) && is_array($field['datalist'])) {
           $attributes['list'] = $id . '_datalist';
           $datalistOptions = array_map(function ($item) {
-            return sprintf('<option value="%s">', $item);
+            return sprintf('<option value="%s">', esc_html($item));
           }, $field['datalist']);
         }
 
