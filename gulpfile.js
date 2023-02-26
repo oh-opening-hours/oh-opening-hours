@@ -84,13 +84,16 @@ const exportTask = gulp.series(clean, build, function() {
     "!.gitmodules",
     "!gulpfile.js",
     "!package.json",
+    "!package-lock.json",
+    "!yarn.lock",
     "!composer.lock",
     "!phpunit.xml",
     "!./tests/**/*",
     "!tests",
     "!./doc/**/*",
     "!doc",
-    "!.travis.yml"
+    "!.travis.yml",
+    "!README.md"
   ];
 
   return gulp
