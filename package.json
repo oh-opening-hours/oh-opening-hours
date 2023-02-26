@@ -1,7 +1,7 @@
 {
   "name": "oh-opening-hours",
   "version": "1.0.0",
-  "description": "WordPress Plugin for managing Opening Hours and Holidays",
+  "description": "WordPress Plugin for managing Opening Hours, Holidays and Irregular Openings",
   "dependencies": {
     "del": "^6.0.0",
     "gulp": "^4.0.2",

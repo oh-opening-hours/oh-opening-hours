@@ -389,6 +389,6 @@ add_filter('op_set_post_type_arguments', function (array $arguments) {
 
 ## Need another filter?
 Filters are a great way to give developers more control over the behavior of an external Plugin and are very easy to integrate.  
-If you feel you would want to have another filter, open an [issue on GitHub](https://github.com/janizde/WP-Opening-Hours/issues).
+If you feel you would want to have another filter, open an [issue on GitHub](https://github.com/oh-opening-hours/oh-opening-hours/issues).
 
 [Table of Contents](../README.md#contents)

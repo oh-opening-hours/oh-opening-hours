@@ -7,13 +7,11 @@ Requires at least: 5.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The WordPress plugin "Opening Hours" offers extensive customization options for displaying your venue's operating hours through the use of Shortcodes and Widgets.
+The "O/H - Opening Hours" WordPress plugin provides a range of customization options for displaying your business's operating hours with the use of Shortcodes and Widgets.
 
 == Description ==
 
-The Opening Hours plugin for WordPress offers several advanced features. Firstly, it supports multiple sets of opening hours, which you can use independently for different parts of your establishment (such as a restaurant and a bar). Secondly, it supports holidays, allowing you to set special opening hours for these occasions. Additionally, the plugin can handle irregular openings, such as different hours during the Christmas period.
-
-Moreover, the plugin allows you to create child sets that can overwrite your regular opening hours during specific periods, such as seasonal hours or an extra day every second week. Finally, the plugin provides four highly customizable widgets and shortcodes that can display contextual information, such as a message indicating when you will next be open if currently closed.
+The WordPress Opening Hours plugin offers advanced features, including support for multiple sets of opening hours that can be used independently for different areas of your business, like a restaurant and a bar. It also supports holidays, allowing you to set special opening hours for those occasions. Moreover, the plugin can manage irregular opening hours, such as changes during the Christmas period.
 
 * Supports multiple Sets of Opening Hours (e.g. one for your restaurant and one for your bar) that you can use independently.
 * Supports Holidays
@@ -29,93 +27,79 @@ Moreover, the plugin allows you to create child sets that can overwrite your reg
 * Irregular Openings Widget: Lists up all Irregular Openings in a table or list
 * Schema.org Widgets: Inserts structured [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD) into a WordPress page or post
 
-[More on Widgets](https://github.com/janizde/WP-Opening-Hours#widgets)
+[More on Widgets](https://github.com/oh-opening-hours/oh-opening-hours#widgets)
 
 = Shortcodes =
 All of the widgets listed up above are also available as shortcodes.
-With the [Opening Hours Shortcode Builder](http://bit.ly/2mmneSk) you can assemble a Shortcode by filling in a form. This is particularly useful when you are not comfortable with the shortcode syntax.
+With the [Opening Hours Shortcode Builder](https://oh-opening-hours.github.io/oh-shortcode-builder/) you can assemble a Shortcode by filling in a form. This is particularly useful when you are not comfortable with the shortcode syntax.
 
-* [More on Shortcodes](https://github.com/janizde/WP-Opening-Hours#shortcodes)
-* [Shortcode Builder](http://bit.ly/2mmneSk)
-* [Shortcode Builder on GitHub](http://bit.ly/35rsQiD)
+* [More on Shortcodes](https://github.com/oh-opening-hours/oh-opening-hours#shortcodes)
+* [Shortcode Builder](https://oh-opening-hours.github.io/oh-shortcode-builder/)
+* [Shortcode Builder on GitHub](https://github.com/oh-opening-hours/oh-shortcode-builder)
 
 = Further Documentation =
-**Further documentation is available on [GitHub](https://github.com/janizde/WP-Opening-Hours).**
+**Further documentation is available on [GitHub](https://github.com/oh-opening-hours/oh-opening-hours).**
 
-* [Features](https://github.com/janizde/WP-Opening-Hours#features)
-* [Installation](https://github.com/janizde/WP-Opening-Hours#installation)
-	* [WordPress Plugin Installer](https://github.com/janizde/WP-Opening-Hours#wordpress-plugin-installer)
-	* [Manual Installation](https://github.com/janizde/WP-Opening-Hours#manual-installation)
-	* [Composer](https://github.com/janizde/WP-Opening-Hours#composer)
-	* [Clone GitHub Repository](https://github.com/janizde/WP-Opening-Hours#clone-repository)
-* [Getting Started](https://github.com/janizde/WP-Opening-Hours#getting-started)
-	* [Setting up your Opening Hours](https://github.com/janizde/WP-Opening-Hours#set-up)
-	* [Child Sets](https://github.com/janizde/WP-Opening-Hours#child-sets)
-* [Widgets](https://github.com/janizde/WP-Opening-Hours#widgets)
-	* [Overview Widget](https://github.com/janizde/WP-Opening-Hours#overview-widget)
-	* [Is Open Widget](https://github.com/janizde/WP-Opening-Hours#is-open-widget)
-	* [Holidays Widget](https://github.com/janizde/WP-Opening-Hours#holidays-widget)
-	* [Irregular Openings Widget](https://github.com/janizde/WP-Opening-Hours#irregular-openings-widget)
-* [Shortcodes](https://github.com/janizde/WP-Opening-Hours#shortcodes)
-	* [Common Attributes](https://github.com/janizde/WP-Opening-Hours#common-attributes)
-	* [[op-overview] Shortcode](https://github.com/janizde/WP-Opening-Hours#op-overview-shortcode)
-	* [[op-is-open] Shortcode](https://github.com/janizde/WP-Opening-Hours#op-is-open-shortcode)
-	* [[op-holidays] Shortcode](https://github.com/janizde/WP-Opening-Hours#op-holidays-shortcode)
-	* [[op-irregular-openings] Shortcode](https://github.com/janizde/WP-Opening-Hours#op-irregular-openings-shortcode)
-* [Filters](https://github.com/janizde/WP-Opening-Hours#filters)
-* [Troubleshooting / FAQ](https://github.com/janizde/WP-Opening-Hours#troubleshooting)
-* [Contributing](https://github.com/janizde/WP-Opening-Hours#contributing)
-	* [Contributing to Code](https://github.com/janizde/WP-Opening-Hours#contributing-to-code)
-	* [Contributing to Translations](https://github.com/janizde/WP-Opening-Hours#contributing-to-translations)
-* [Changelog](https://github.com/janizde/WP-Opening-Hours#changelog)
-* [License](https://github.com/janizde/WP-Opening-Hours#license)
+* [Features](https://github.com/oh-opening-hours/oh-opening-hours#features)
+* [Installation](https://github.com/oh-opening-hours/oh-opening-hours#installation)
+	* [WordPress Plugin Installer](https://github.com/oh-opening-hours/oh-opening-hours#wordpress-plugin-installer)
+	* [Manual Installation](https://github.com/oh-opening-hours/oh-opening-hours#manual-installation)
+	* [Composer](https://github.com/oh-opening-hours/oh-opening-hours#composer)
+	* [Clone GitHub Repository](https://github.com/oh-opening-hours/oh-opening-hours#clone-repository)
+* [Getting Started](https://github.com/oh-opening-hours/oh-opening-hours#getting-started)
+	* [Setting up your Opening Hours](https://github.com/oh-opening-hours/oh-opening-hours#set-up)
+	* [Child Sets](https://github.com/oh-opening-hours/oh-opening-hours#child-sets)
+* [Widgets](https://github.com/oh-opening-hours/oh-opening-hours#widgets)
+	* [Overview Widget](https://github.com/oh-opening-hours/oh-opening-hours#overview-widget)
+	* [Is Open Widget](https://github.com/oh-opening-hours/oh-opening-hours#is-open-widget)
+	* [Holidays Widget](https://github.com/oh-opening-hours/oh-opening-hours#holidays-widget)
+	* [Irregular Openings Widget](https://github.com/oh-opening-hours/oh-opening-hours#irregular-openings-widget)
+* [Shortcodes](https://github.com/oh-opening-hours/oh-opening-hours#shortcodes)
+	* [Common Attributes](https://github.com/oh-opening-hours/oh-opening-hours#common-attributes)
+	* [[op-overview] Shortcode](https://github.com/oh-opening-hours/oh-opening-hours#op-overview-shortcode)
+	* [[op-is-open] Shortcode](https://github.com/oh-opening-hours/oh-opening-hours#op-is-open-shortcode)
+	* [[op-holidays] Shortcode](https://github.com/oh-opening-hours/oh-opening-hours#op-holidays-shortcode)
+	* [[op-irregular-openings] Shortcode](https://github.com/oh-opening-hours/oh-opening-hours#op-irregular-openings-shortcode)
+* [Filters](https://github.com/oh-opening-hours/oh-opening-hours#filters)
+* [Troubleshooting / FAQ](https://github.com/oh-opening-hours/oh-opening-hours#troubleshooting)
+* [Contributing](https://github.com/oh-opening-hours/oh-opening-hours#contributing)
+	* [Contributing to Code](https://github.com/oh-opening-hours/oh-opening-hours#contributing-to-code)
+	* [Contributing to Translations](https://github.com/oh-opening-hours/oh-opening-hours#contributing-to-translations)
+* [Changelog](https://github.com/oh-opening-hours/oh-opening-hours#changelog)
+* [License](https://github.com/oh-opening-hours/oh-opening-hours#license)
 
 == Installation ==
 
 There are multiple ways to install the Opening Hours Plugin
 
-1. [WordPress Plugin Installer](https://github.com/janizde/WP-Opening-Hours#wordpress-plugin-installer)
-1. [Manual Installation](https://github.com/janizde/WP-Opening-Hours#manual-installation)
-1. [Composer](https://github.com/janizde/WP-Opening-Hours#composer)
-1. [Clone GitHub Repository](https://github.com/janizde/WP-Opening-Hours#clone-repository)
+1. [WordPress Plugin Installer](https://github.com/oh-opening-hours/oh-opening-hours#wordpress-plugin-installer)
+1. [Manual Installation](https://github.com/oh-opening-hours/oh-opening-hours#manual-installation)
+1. [Composer](https://github.com/oh-opening-hours/oh-opening-hours#composer)
+1. [Clone GitHub Repository](https://github.com/oh-opening-hours/oh-opening-hours#clone-repository)
 
 == Frequently Asked Questions ==
 
 = How can I change the styling of the widgets / shortcodes? =
 
 The Plugin provides very minimal styling, which is the red and green colors for the open / closed messages. All other kind of styling is left to the WordPress Theme you are using or your custom CSS.
-To disable the styling of the text color the [`op_use_front_end_styles`](https://github.com/janizde/WP-Opening-Hours/blob/master/doc/filters.md#op_use_front_end_styles) filter hook can be used.
+To disable the styling of the text color the [`op_use_front_end_styles`](https://github.com/oh-opening-hours/oh-opening-hours/blob/master/doc/filters.md#op_use_front_end_styles) filter hook can be used.
 
 = My language is not provided in the Plugin =
 
 You can participate to Plugin translations to make it available in more languages.
-Please read the section on [contributing to translations](https://github.com/janizde/WP-Opening-Hours#contributing-to-translations)
+Please read the section on [contributing to translations](https://github.com/oh-opening-hours/oh-opening-hours#contributing-to-translations)
 
 = I found a bug and I would like to fix it =
 
-If you found a bug you would like to fix feel free to [contribute to the project on GitHub](https://github.com/janizde/WP-Opening-Hours#contributing-to-code).
+If you found a bug you would like to fix feel free to [contribute to the project on GitHub](https://github.com/oh-opening-hours/oh-opening-hours#contributing-to-code).
+
+== Credits ==
+
+Opening Hours is based on the great plugin by [Jannik Portz](https://github.com/janizde/WP-Opening-Hours).
 
 == Changelog ==
 
 = 1.0.0 =
 initial version
-
-== Upgrade Notice ==
-
-= 2.0 =
-The plugin has been rewritten from scratch and a lot has changed. Old data should be converted automatically but a lot of the CSS classes have changed. Take some time to update it and maybe test it in a development environment to make sure it works as expected. Requires PHP >= 5.3, WordPress >= 4
-
-
-== Credits ==
-
-Opening Hours is based on the original plugin by Jannik Portz. The new release also includes work by several other people:
-•	Daniel Mester Pirttijärvi (Jdenticon),
-•	Shamus Young (Wavatars),
-•	Andreas Gohr (the original MonsterID and RingIcon),
-•	Scott Sherrill-Mix & Katherine Garner (the hand-drawn monster update)
-•	Benjamin Laugueux (Identicon),
-•	David Revoy (Bird and Cat Avatars),
-•	Zikri Kader, Colin Davis & Nimiq (RoboHash), and
-•	Johanna Amann (the Avatar Privacy icon).
-https://wordpress.org/plugins/avatar-privacy/
-
+* fix security issues
+* improvements

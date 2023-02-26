@@ -1,6 +1,4 @@
-# WordPress Opening Hours 🔌 🕐
-[![Build Status](https://travis-ci.org/janizde/WP-Opening-Hours.svg?branch=develop)](https://travis-ci.org/janizde/WP-Opening-Hours)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FYGR6EJSN8S8)
+# O/H - Opening Hours 🕐
 
 Opening Hours is a highly customizable WordPress plugin to set up your venue's opening hours and display them with Shortcodes and Widgets.
 
@@ -33,7 +31,7 @@ Opening Hours is a highly customizable WordPress plugin to set up your venue's o
 	* [Contributing to Code](#contributing-to-code)
 	* [Contributing to Translations](#contributing-to-translations)
 * [Changelog](#changelog)
-* [Donate](#donate)
+* [Credits](#credits)
 * [License](#license)
 
 ## Further Reading
@@ -62,7 +60,7 @@ Opening Hours is a highly customizable WordPress plugin to set up your venue's o
 1. Activate the Plugin
 
 ### <a name="manual-installation"></a>Manual Installation
-1. Download the .zip-archive from <https://wordpress.org/plugins/kk-opening-hours/>
+1. Download the .zip-archive from <https://wordpress.org/plugins/oh-opening-hours/>
 1. Unzip the archive
 1. Upload the directory /opening-hours to your wp-content/plugins
 1. In your Admin Panel go to Plugins and active the Opening Hours Plugin
@@ -87,7 +85,7 @@ Add the Opening Hours plugin as dependency
 
 ~~~json
 "require": {
-  "wpackagist-plugin/kk-opening-hours": "1.2"
+  "wpackagist-plugin/oh-opening-hours": "1.2"
 }
 ~~~
 
@@ -549,10 +547,10 @@ Shortcodes have exactly the same options as Widgets because every Widget is basi
 
 ### <a name="shortcode-builder"></a>Shortcode Builder
 
-The [Opening Hours Shortcode Builder](http://bit.ly/2mmneSk) assembles shortcodes for you that you can copy and insert into your content. This is particularly useful for people who are unfamiliar with shortcodes.
+The [Opening Hours Shortcode Builder](https://oh-opening-hours.github.io/oh-shortcode-builder/) assembles shortcodes for you that you can copy and insert into your content. This is particularly useful for people who are unfamiliar with shortcodes.
 
-The builder can be found at [https://janizde.github.io/opening-hours-shortcode-builder/](http://bit.ly/2mmneSk)  
-Development takes place in the [GitHub Repo](http://bit.ly/35rsQiD)
+The builder can be found at [https://janizde.github.io/opening-hours-shortcode-builder/](https://oh-opening-hours.github.io/oh-shortcode-builder/)  
+Development takes place in the [GitHub Repo](https://github.com/oh-opening-hours/oh-shortcode-builder)
 
 In the edit page of parent sets the button *Create a Shortcode* opens the shortcode builder in a popup and prefills the `set_id` accordingly.
 
@@ -987,14 +985,14 @@ The calculation of the Is Open status depends on the Timezone setting in WordPre
 
 ### How can I change the styling of the widgets / shortcodes?
 The Plugin provides very minimal styling, which is the red and green colors for the open / closed messages. All other kind of styling is left to the WordPress Theme you are using or your custom CSS.
-To disable the styling of the text color the [`op_use_front_end_styles`](https://github.com/janizde/WP-Opening-Hours/blob/master/doc/filters.md#op_use_front_end_styles) filter hook can be used.
+To disable the styling of the text color the [`op_use_front_end_styles`](https://github.com/oh-opening-hours/oh-opening-hours/blob/master/doc/filters.md#op_use_front_end_styles) filter hook can be used.
 
 [↑ Table of Contents](#contents)
 
 ## <a name="contributing"></a>Contributing
 ### <a name="contributing-to-code"></a>Contribute to Code
 
-The development of the Opening Hours Plugin takes place at [GitHub](https://github.com/janizde/WP-Opening-Hours).  
+The development of the Opening Hours Plugin takes place at [GitHub](https://github.com/oh-opening-hours/oh-opening-hours).  
 If you want to contribute feel free to fork the repository and send pull requests.
 
 ##### <a name="git-flow"></a>GitFlow
@@ -1013,10 +1011,10 @@ However, you can still submit your translations to [Polyglots](#polyglots) so ot
 
 The translations of weekdays are not included in the Plugin translations but are loaded from the WordPress core translations. This serves the purpose, that these are always translated to the language that your WordPress installation runs on independently of the Plugin translation progress.
 
-#### <a name="polyglots"></a>[WordPress Polyglots](https://translate.wordpress.org/projects/wp-plugins/kk-opening-hours)
+#### <a name="polyglots"></a>[WordPress Polyglots](https://translate.wordpress.org/projects/wp-plugins/oh-opening-hours)
 Polyglots is the name of the community of volunteers translating WordPress resources like Themes, Plugins and also the WordPress core. It has become a central place for WordPress translation and is tightly coupled with the WordPress Theme/Plugin repositories.
 
-Since version 2.0 the translation of the Opening Hours Plugin takes place at [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/kk-opening-hours). Advantages of using Polyglots:
+Since version 2.0 the translation of the Opening Hours Plugin takes place at [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/oh-opening-hours). Advantages of using Polyglots:
 
 * Larger translation community
 * Translation can be separated from the actual development of the Plugin
@@ -1025,7 +1023,7 @@ Since version 2.0 the translation of the Opening Hours Plugin takes place at [tr
 If you want to contribute to translations and there is no Project Translation Editor for your locale, please drop me a message or open an issue with your WordPress.org username and I will request an editorship for your locale.  
 You can find out more about project translation roles [here.](https://make.wordpress.org/polyglots/handbook/about/teams/)  
 
-If you have already translated the Plugin on translate.jannikportz.de, I have transferred all translations to the [translate.wordpress.org project](https://translate.wordpress.org/projects/wp-plugins/kk-opening-hours).
+If you have already translated the Plugin on translate.jannikportz.de, I have transferred all translations to the [translate.wordpress.org project](https://translate.wordpress.org/projects/wp-plugins/oh-opening-hours).
 You will then also need to become a Project Translation Editor to approve your translations (I know this is a bit tedious).
 So in this case please also drop me a message or open an issue with your WordPress.org account name.
 
@@ -1034,110 +1032,26 @@ If you can not translate the whole plugin or don't want to wait until everything
 1. Select the translation set in the list of available languages.
 1. Scroll to the bottom.
 1. In the line below the legend, select `all current` as `Machine Object Message (.mo)` and click `Export`.
-1. Rename the file to `kk-opening-hours-{locale}.mo` (replace `{locale}` with the actual locale of the translation, e.g. `de_DE` for German).
+1. Rename the file to `oh-opening-hours-{locale}.mo` (replace `{locale}` with the actual locale of the translation, e.g. `de_DE` for German).
 1. Move the file to `/path/to/wordpress/wp-content/languages/plugins`
 
 #### Pull Request on GitHub
 Translations via Pull Request on GitHub are no longer supported and won't be merged in the future, as translation now takes place at WordPress Polyglots. Please refer to [the section on WordPress Polyglots](#polyglots)
 
-#### translate.jannikportz.de
-translate.jannikportz.de has been shut down in favor of WordPress Polyglots. Please refer to [the section on WordPress Polyglots](#polyglots)
-
 [↑ Table of Contents](#contents)
 
 ## <a name="changelog"></a>Changelog
 
-### v2.3.0
+### v1.0.0
 
-* Fix a bug that would cause redundant database writes caused by a DB_VERSION mismatch
-* Add filter `op_shortcode_template_path`
-* Deprecate filter `op_shortcode_template` in favor of `op_shortcode_template_path`
-* Consistently use en dashes to separate dates and times in default formats
-* Add filter `op_set_post_type_arguments`
-
-### v2.2.1
-
-* Add support for custom user locales in the admin panel for cases when the user locale differs from the site locale
-
-### v2.2.0
-
-* Added [op-schema] shortcode and *Schema.org* Widget for structured JSON-LD representation of opening hours, holidays and irregular openings
-* Added button for Shortcode Builder in Set edit page
-
-### v2.1.4
-
-* Fixed a warning occuring in the Overview shortcode with PHP >= 7.2
-* Added method `OpeningHours->clearSetProviders()` to `OpeningHours` singleton
-
-### v2.1.3
-
-* Fix concerning time formats of Irregular Openings and Periods when saving by @Braunson
-
-### v2.1.2
-
-* Fixed JavaScript conflicts with other plugins
-
-### v2.1.1
-
-* Fixed a bug that did not load the parent set's irregular openings and holidays in active child sets.
-* Fixed a bug that blocked irregular openings and periods on the days after irregular openings that go beyond midnight.
-
-### v2.1
-
-* Added today's opening hours in Is Open shortcode / widget
-* Automatically hide past Holidays and Irregular Openings in the respective shortcodes / widgets
-* Sort Holidays and Irregular Openings ascendingly by start date
-* Use WordPress shipped version of jquery-ui to prevent conflicts with other plugins
-* Merge dates of Holidays if they only span one day
-* Added offset option to Overview shortcode / widget
-* Added filters
-	* `op_is_open_format_next`
-	* `op_is_open_format_today`
-	* `op_overview_model`
-* Various bug fixes
-
-### v2.0.5
-
-* fixed bug concerning child set initialization. thanks to @nikomuse
-
-### v2.0.4
-
-* Added support for UTC offset timezones
-
-### v2.0.3
-
-* Fixed timezone bug in WordPress 4.7
-
-### v2.0.2
-
-* Fixed a bug that didn't show next open Period when there are no regular Periods but Irregular Openings in the current Set
-
-### v2.0.1
-
-* Added SetAlias functionality
-* Minor fixes including:
-    * Fixed mixed content error (@foomep)
-    * Fixed auto convert issue
-    * Fixed PHP 5.3 incompatibility issues
-
-### v2.0.0
-Completely new Plugin. When Updating you will have to set up your Opening Hours and Widgets / Shortcodes again!
+initial version
+* fix security issues
+* improvements
 
 [↑ Table of Contents](#contents)
 
 ## <a name="credits"></a> Credits
-Avatar Privacy is based on the original plugin by (Jannik Portz)[]. The new release also includes work by several other people:
-•	Daniel Mester Pirttijärvi (Jdenticon),
-•	Shamus Young (Wavatars),
-•	Andreas Gohr (the original MonsterID and RingIcon),
-•	Scott Sherrill-Mix & Katherine Garner (the hand-drawn monster update)
-•	Benjamin Laugueux (Identicon),
-•	David Revoy (Bird and Cat Avatars),
-•	Zikri Kader, Colin Davis & Nimiq (RoboHash), and
-•	Johanna Amann (the Avatar Privacy icon).
-https://wordpress.org/plugins/avatar-privacy/
-
-
+O/H - Opening Hours is based on the original plugin by [Jannik Portz](https://github.com/janizde/WP-Opening-Hours).
 
 ## <a name="license"></a>License
 Copyright &copy; 2016 Jannik Portz

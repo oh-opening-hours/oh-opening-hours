@@ -271,7 +271,7 @@ class SetTest extends OpeningHoursTestCase {
 
   /**
    * Test satisfying requirements for issue #72 in GitHub
-   * https://github.com/janizde/kk-opening-hours/issues/72
+   * https://github.com/janizde/oh-opening-hours/issues/72
    */
   public function testIsOpenIOGitHub72() {
     $irregularOpenings = new ArrayObject();
