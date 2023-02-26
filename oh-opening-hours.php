@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Opening Hours
- * Plugin URI: https://github.com/wp-kirnbauer/oh-opening-hours
+ * Plugin URI: https://github.com/oh-opening-hours/oh-opening-hours
  * Description: Manage your venue's Opening Hours, Holidays and Irregular Openings in WordPress and display them in many different Widgets and Shortcodes
  * Version: 1.0.0
  * Author: Klaus Kirnbauer
