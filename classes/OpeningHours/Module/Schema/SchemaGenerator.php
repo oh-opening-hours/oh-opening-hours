@@ -143,9 +143,9 @@ class SchemaGenerator {
     return array_map(function (Holiday $h) {
       return array(
         '@type' => 'OpeningHoursSpecification',
-        'name' => esc_html($h->getName()),
-        'validFrom' => esc_html($h->getStart()->format(SchemaGenerator::SCHEMA_DATE_FORMAT)),
-        'validThrough' => esc_html($h->getEnd()->format(SchemaGenerator::SCHEMA_DATE_FORMAT))
+        'name' => $h->getName(),
+        'validFrom' => $h->getStart()->format(SchemaGenerator::SCHEMA_DATE_FORMAT),
+        'validThrough' => $h->getEnd()->format(SchemaGenerator::SCHEMA_DATE_FORMAT)
       );
     }, $holidays);
   }
@@ -169,11 +169,11 @@ class SchemaGenerator {
     return array_map(function (IrregularOpening $io) {
       return array(
         '@type' => 'OpeningHoursSpecification',
-        'name' => esc_html($io->getName()),
-        'opens' => esc_html($io->getStart()->format(SchemaGenerator::SCHEMA_TIME_FORMAT)),
-        'closes' => esc_html($io->getEnd()->format(SchemaGenerator::SCHEMA_TIME_FORMAT)),
-        'validFrom' => esc_html($io->getDate()->format(SchemaGenerator::SCHEMA_DATE_FORMAT)),
-        'validThrough' => esc_html($io->getDate()->format(SchemaGenerator::SCHEMA_DATE_FORMAT))
+        'name' => $io->getName(),
+        'opens' => $io->getStart()->format(SchemaGenerator::SCHEMA_TIME_FORMAT),
+        'closes' => $io->getEnd()->format(SchemaGenerator::SCHEMA_TIME_FORMAT),
+        'validFrom' => $io->getDate()->format(SchemaGenerator::SCHEMA_DATE_FORMAT),
+        'validThrough' => $io->getDate()->format(SchemaGenerator::SCHEMA_DATE_FORMAT)
       );
     }, $ios);
   }
