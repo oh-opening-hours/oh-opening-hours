@@ -41,7 +41,7 @@ if ( ! empty( $title ) ) {
   foreach ($irregular_openings as $io) :
     $highlighted = ($highlight && $io->isInEffect()) ? $class_highlighted : '';
   ?>
-    <tr class="op-irregular-opening <?php echo $highlighted; ?>">
+    <tr class="op-irregular-opening <?php echo esc_attr($highlighted); ?>">
       <td class="col-name"><?php echo esc_html( $io->getName() ); ?></td>
       <td class="col-date"><?php echo esc_html( Dates::format($date_format, $io->getDate()) ); ?></td>
       <td class="col-time"><?php echo esc_html( $io->getFormattedTimeRange($time_format) ); ?></td>
