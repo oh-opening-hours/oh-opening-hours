@@ -17,6 +17,6 @@ jobs:
     - name: Unit Test ✅
       uses: php-actions/phpunit@v3
       with:
-        version: 9.0
+        version: 9.6
         php_version: ${{ matrix.php }}
         configuration: phpunit.xml
