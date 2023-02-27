@@ -9,5 +9,5 @@ extract($this->data['attributes']);
  */
 ?>
 <script type="application/ld+json">
-  <?php echo wp_json_encode($schema, JSON_PRETTY_PRINT + JSON_UNESCAPED_SLASHES); ?>
+<?php echo wp_json_encode($schema, JSON_HEX_TAG  + JSON_PRETTY_PRINT + JSON_UNESCAPED_SLASHES); ?>
 </script>
