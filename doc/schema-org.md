@@ -83,7 +83,7 @@ The shortcode and widget provide ways to alter the `@type`, `name` and `descript
 . Further modifications on the schema record can be performed using the [`op_shortcode_attributes`](filters.md#op_shortcode_attributes) filter. In the following code snippet the record is enhanced with an [address](https://schema.org/address):
 
 ```php
-use OpeningHours\Module\Shortcode\Schema;
+use OH_Opening_Hours\Module\Shortcode\Schema;
 
 add_filter('op_shortcode_attributes', function (array $attributes, $shortcode) {
     // Only for the op-schema shortcode

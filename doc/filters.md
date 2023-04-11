@@ -19,28 +19,28 @@ With the `op_shortcode_attributes` filter you can filter the associative array c
 
 Parameters passed to the filter callback:
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="25%">Type</th>
-		<th width="50%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>$attributes</code></td>
-			<td><code>array</code></td>
-			<td>Associative array containing all shortcode attributes including the Set object under the key `set`. You can see all attributes for the specfic Shortcodes in the section on [Shortcodes](#shortcodes).</td>
-		</tr>
-		<tr>
-			<td><code>$shortcode</code></td>
-			<td><code>AbstractShortcode</code></td>
-			<td>The Shortcode singleton instance. You can for example check for the type of Shortcode with the `instanceof` operator.</td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div width="25%">Type</div>
+		<div width="50%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>$attributes</code></div>
+			<td><code>array</code></div>
+			<td>Associative array containing all shortcode attributes including the Set object under the key `set`. You can see all attributes for the specfic Shortcodes in the section on [Shortcodes](#shortcodes).</div>
+		</div>
+		<div>
+			<td><code>$shortcode</code></div>
+			<td><code>AbstractShortcode</code></div>
+			<td>The Shortcode singleton instance. You can for example check for the type of Shortcode with the `instanceof` operator.</div>
+		</div>
+	</div>
+</section>
 
 ### Example: Always use a custom date and time format for Irregular Openings
 ~~~php
-use OpeningHours\Module\Shortcode\IrregularOpenings;
+use OH_Opening_Hours\Module\Shortcode\IrregularOpenings;
 
 add_filter('op_shortcode_attributes', function (array $attributes, $shortcode) {
 	// As this happens just before the HTML is generated
@@ -63,24 +63,24 @@ With the `op_shortcode_template` filter you can specify your own shortcode templ
 
 Parameters passed to the filter callback:
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="25%">Type</th>
-		<th width="50%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>$template</code></td>
-			<td><code>string</code></td>
-			<td>Relative path to a `.php` template file.</td>
-		</tr>
-		<tr>
-			<td><code>$shortcode</code></td>
-			<td><code>AbstractShortcode</code></td>
-			<td>The Shortcode singleton instance. You can for example check for the type of Shortcode with the `instanceof` operator.</td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div width="25%">Type</div>
+		<div width="50%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>$template</code></div>
+			<td><code>string</code></div>
+			<td>Relative path to a `.php` template file.</div>
+		</div>
+		<div>
+			<td><code>$shortcode</code></div>
+			<td><code>AbstractShortcode</code></div>
+			<td>The Shortcode singleton instance. You can for example check for the type of Shortcode with the `instanceof` operator.</div>
+		</div>
+	</div>
+</section>
 
 ## `op_shortcode_template_path`
 
@@ -88,28 +88,28 @@ With the `op_shortcode_template` filter you can specify your own shortcode templ
 
 Parameters passed to the filter callback:
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="25%">Type</th>
-		<th width="50%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>$template</code></td>
-			<td><code>string</code></td>
-			<td>Absolute path to a `.php` template file.</td>
-		</tr>
-		<tr>
-			<td><code>$shortcode</code></td>
-			<td><code>AbstractShortcode</code></td>
-			<td>The Shortcode singleton instance. You can for example check for the type of Shortcode with the `instanceof` operator.</td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div width="25%">Type</div>
+		<div width="50%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>$template</code></div>
+			<td><code>string</code></div>
+			<td>Absolute path to a `.php` template file.</div>
+		</div>
+		<div>
+			<td><code>$shortcode</code></div>
+			<td><code>AbstractShortcode</code></div>
+			<td>The Shortcode singleton instance. You can for example check for the type of Shortcode with the `instanceof` operator.</div>
+		</div>
+	</div>
+</section>
 
 ### Example: Specify own shortcode template for Holidays
 ~~~php
-use OpeningHours\Module\Shortcode\Holidays;
+use OH_Opening_Hours\Module\Shortcode\Holidays;
 
 add_filter('op_shortcode_template_path', function ($template, $shortcode) {
 	// If the Shortcode is a Holidays shortcode return you custom template
@@ -127,24 +127,24 @@ With the `op_shortcode_markup` filter you can filter the final Shortcode output.
 
 Parameters passed to the filter callback:
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="25%">Type</th>
-		<th width="50%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>$markup</code></td>
-			<td><code>string</code></td>
-			<td>The final Shortcode markup as HTML string.</td>
-		</tr>
-		<tr>
-			<td><code>$shortcode</code></td>
-			<td><code>AbstractShortcode</code></td>
-			<td>The Shortcode singleton instance. You can for example check for the type of Shortcode with the `instanceof` operator.</td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div width="25%">Type</div>
+		<div width="50%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>$markup</code></div>
+			<td><code>string</code></div>
+			<td>The final Shortcode markup as HTML string.</div>
+		</div>
+		<div>
+			<td><code>$shortcode</code></div>
+			<td><code>AbstractShortcode</code></div>
+			<td>The Shortcode singleton instance. You can for example check for the type of Shortcode with the `instanceof` operator.</div>
+		</div>
+	</div>
+</section>
 
 ### Example: Wrapping the Shortcode markup in a `<section>` tag.
 
@@ -165,30 +165,30 @@ With this filter you can change the format of the next open period message withi
 
 Parameters passed to the filter callback:
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="25%">Type</th>
-		<th width="50%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>$string</code></td>
-			<td><code>string</code></td>
-			<td>The string formatted by the plugin. May be the formatted period string according to shortcode / widget settings or `null` if no next open period could be found.</td>
-		</tr>
-		<tr>
-			<td><code>$nextPeriod</code></td>
-			<td><code>Period|null</code></td>
-			<td>The next open `Period` object or `null` if no next open period could be found.</td>
-		</tr>
-		<tr>
-			<td><code>$attributes</code></td>
-			<td><code>array</code></td>
-			<td>Associtative array containing all shortcode attributes / widget options.</td>
-		</tr>
-		<tr>
-			<td><code>$todayData</code></td>
-			<td><code>array</code></td>
+	<header>
+		<div width="25%">Name</div>
+		<div width="25%">Type</div>
+		<div width="50%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>$string</code></div>
+			<td><code>string</code></div>
+			<td>The string formatted by the plugin. May be the formatted period string according to shortcode / widget settings or `null` if no next open period could be found.</div>
+		</div>
+		<div>
+			<td><code>$nextPeriod</code></div>
+			<td><code>Period|null</code></div>
+			<td>The next open `Period` object or `null` if no next open period could be found.</div>
+		</div>
+		<div>
+			<td><code>$attributes</code></div>
+			<td><code>array</code></div>
+			<td>Associtative array containing all shortcode attributes / widget options.</div>
+		</div>
+		<div>
+			<td><code>$todayData</code></div>
+			<td><code>array</code></div>
 			<td>
 				Associative array of arrays containing all data for today. The array has the following structure:
 <pre>
@@ -198,10 +198,10 @@ Parameters passed to the filter callback:
 	'irregularOpenings' => IrregularOpening[]
 ]
 </pre>
-			</td>
-		</tr>
-	</tbody>
-</table>
+			</div>
+		</div>
+	</div>
+</section>
 
 ### Exmaple: showing current holiday name
 
@@ -230,30 +230,30 @@ With this filter you can change the format of today's opening hours message with
 
 Parameters passed to the filter callback:
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="25%">Type</th>
-		<th width="50%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>$string</code></td>
-			<td><code>string</code></td>
-			<td>The string formatted by the plugin. May be the formatted opening hours string according to the shortcode attributes or null if there are no periods for that day.</td>
-		</tr>
-		<tr>
-			<td><code>$periods</code></td>
-			<td><code>Period[]</code></td>
-			<td>Array of today's periods. If an irregular opening is in effect it will be converted to a period with the correct weekday and passed as the one and only element of the array.</td>
-		</tr>
-		<tr>
-			<td><code>$attributes</code></td>
-			<td><code>array</code></td>
-			<td>Associtative array containing all shortcode attributes / widget options.</td>
-		</tr>
-		<tr>
-			<td><code>$todayData</code></td>
-			<td><code>array</code></td>
+	<header>
+		<div width="25%">Name</div>
+		<div width="25%">Type</div>
+		<div width="50%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>$string</code></div>
+			<td><code>string</code></div>
+			<td>The string formatted by the plugin. May be the formatted opening hours string according to the shortcode attributes or null if there are no periods for that day.</div>
+		</div>
+		<div>
+			<td><code>$periods</code></div>
+			<td><code>Period[]</code></div>
+			<td>Array of today's periods. If an irregular opening is in effect it will be converted to a period with the correct weekday and passed as the one and only element of the array.</div>
+		</div>
+		<div>
+			<td><code>$attributes</code></div>
+			<td><code>array</code></div>
+			<td>Associtative array containing all shortcode attributes / widget options.</div>
+		</div>
+		<div>
+			<td><code>$todayData</code></div>
+			<td><code>array</code></div>
 			<td>
 				Associative array of arrays containing all data for today. The array has the following structure:
 <pre>
@@ -263,10 +263,10 @@ Parameters passed to the filter callback:
 	'irregularOpenings' => IrregularOpening[]
 ]
 </pre>
-			</td>
-		</tr>
-	</tbody>
-</table>
+			</div>
+		</div>
+	</div>
+</section>
 
 ## `op_overview_model`
 
@@ -283,29 +283,29 @@ The `OverviewModel` constructor takes two parameters:
 
 Parameters passed to the filter callback:
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="25%">Type</th>
-		<th width="50%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>$model</code></td>
-			<td><code>OverviewModel|null</code></td>
-			<td>The <code>OverviewModel</code> returned by the previous filter or <code>null</code> if no previous filter has been run.</td>
-		</tr>
-		<tr>
-			<td><code>$set</code></td>
-			<td><code>Set</code></td>
-			<td>The current set the shortcode uses</td>
-		</tr>
-		<tr>
-			<td><code>$attributes</code></td>
-			<td><code>array</code></td>
-			<td>Associtative array containing all shortcode attributes / widget options.</td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div width="25%">Type</div>
+		<div width="50%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>$model</code></div>
+			<td><code>OverviewModel|null</code></div>
+			<td>The <code>OverviewModel</code> returned by the previous filter or <code>null</code> if no previous filter has been run.</div>
+		</div>
+		<div>
+			<td><code>$set</code></div>
+			<td><code>Set</code></div>
+			<td>The current set the shortcode uses</div>
+		</div>
+		<div>
+			<td><code>$attributes</code></div>
+			<td><code>array</code></div>
+			<td>Associtative array containing all shortcode attributes / widget options.</div>
+		</div>
+	</div>
+</section>
 
 **Return value**  
 The filter may return an instance of the `OverviewModel` or any derived class or `null`.
@@ -314,7 +314,7 @@ The filter may return an instance of the `OverviewModel` or any derived class or
 
 ~~~php
 use OpenignHours\Module\Shortcode\OverviewModel;
-use OpeningHours\Util\Dates;
+use OH_Opening_Hours\Util\Dates;
 
 add_filter('op_overview_model', function ($model, $set, $attributes) {
 	// Create \DateTime object 1 week in future
@@ -338,7 +338,7 @@ add_filter('op_overview_model', function ($model, $set, $attributes) {
 ~~~
 
 ## `op_set_providers`
-With the `op_set_providers` filter you can modify the registered SetProviders of the OpeningHours Module, i.e. adding new SetProviders and removing previously registered ones.  
+With the `op_set_providers` filter you can modify the registered SetProviders of the OH_Opening_Hours Module, i.e. adding new SetProviders and removing previously registered ones.  
 [Further reading on SetProviders](./set-providers.md)
 
 ## <a name="op_set_alias_presets"></a>`op_set_alias_presets`

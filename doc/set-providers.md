@@ -54,17 +54,17 @@ The method must return an instance of the `Set` class (or any sub-class) populat
 There are two ways to register your custom SetProviders
 
 #### 1. Via method call
-You can directly add your SetProvider to the OpeningHours singleton module. It is recommended to do this on the `init` action hook with a priority greater than 10.
+You can directly add your SetProvider to the OH_Opening_Hours singleton module. It is recommended to do this on the `init` action hook with a priority greater than 10.
 
 ```php
-use OpeningHours\Module\OpeningHours;
+use OH_Opening_Hours\Module\OpeningHours;
 
 add_action('init', function () {
 	// Make sure the Plugin is active
 	if (!class_exists('OpeningHours\ModuleOpeningHours'))
 		return;
 
-	$openingHours = OpeningHours::getInstance();
+	$openingHours = OH_Opening_Hours::getInstance();
 	$openingHours->addSetProvider(new MyCustomSetProvider());
 }, 11);
 ```
@@ -86,12 +86,12 @@ add_filter('op_set_providers', function (array $setProviders) {
 ```php
 namespace My\Namespace;
 
-use OpeningHours\Entity\Set;
-use OpeningHours\Entity\SetProvider;
-use OpeningHours\Entity\Period;
-use OpeningHours\Entity\Holiday;
-use OpeningHours\Entity\IrregularOpenings;
-use OpeningHours\Util\ArrayObject;
+use OH_Opening_Hours\Entity\Set;
+use OH_Opening_Hours\Entity\SetProvider;
+use OH_Opening_Hours\Entity\Period;
+use OH_Opening_Hours\Entity\Holiday;
+use OH_Opening_Hours\Entity\IrregularOpenings;
+use OH_Opening_Hours\Util\ArrayObject;
 
 class StaticSetProvider extends SetProvider {
 	
@@ -110,7 +110,7 @@ class StaticSetProvider extends SetProvider {
 		$set->setName('Static Set');
 		$set->setDescription('Static Set description');
 		
-		// Make sure this is an OpeningHours\Util\ArrayObject and not \ArrayObject
+		// Make sure this is an OH_Opening_Hours\Util\ArrayObject and not \ArrayObject
 		$periods = new ArrayObject();
 		$periods->append(new Period(0, '08:00', '12:00'));
 		$periods->append(new Period(0, '13:00', '20:00'));
@@ -136,14 +136,14 @@ class StaticSetProvider extends SetProvider {
 // e.g. in your theme's functions.php
 // ----------------------------------
 
-use OpeningHours\Module\OpeningHours;
+use OH_Opening_Hours\Module\OpeningHours;
 use My\Namespace\StaticSetProvider;
 
 add_action('init', function () {
 	if (!class_exists('OpeningHours\Module\OpeningHours'))
 		return;
 		
-	$openingHours = OpeningHours::getInstance();
+	$openingHours = OH_Opening_Hours::getInstance();
 	$openingHours->addSetProvider(new StaticSetProvider());
 });
 ```

@@ -13,27 +13,27 @@ The document contains textual description and code samples showing the basic fun
 
 ## In other documents
 * [Filters](./filters.md) - to alter shortcode attributes, templates and more
-* [SetProviders](./set-providers.md) - to implement custom sources of OpeningHours data
+* [SetProviders](./set-providers.md) - to implement custom sources of OH_Opening_Hours data
 
-## <a name="opening-hours-module"></a> OpeningHours module
+## <a name="opening-hours-module"></a> OH_Opening_Hours module
 Class [`OpeningHours\Module\OpeningHours`](./../classes/OpeningHours/Module/OpeningHours.php)
 
-The OpeningHours module Singleton instance is the entry point of the Plugin. You can retrieve it via the static `getInstance` method.  
-You will probably want to use it to retrieve a specific Set to get its Periods, Holidays and Irregular OpeningHours
+The OH_Opening_Hours module Singleton instance is the entry point of the Plugin. You can retrieve it via the static `getInstance` method.  
+You will probably want to use it to retrieve a specific Set to get its Periods, Holidays and Irregular OH_Opening_Hours
 
 ```php
-use OpeningHours\Module\OpeningHours;
+use OH_Opening_Hours\Module\OpeningHours;
 
-$module = OpeningHours::getInstance();
+$module = OH_Opening_Hours::getInstance();
 ```
 
 You can retrieve a single Set by its id. Any of the registered [`SetProviders`](./set-providers.md) must offer a Set with the specified id, otherwise you will be returned `null`.
 
 ```php
-use OpeningHours\Module\OpeningHours;
-use OpeningHours\Entity\Set;
+use OH_Opening_Hours\Module\OpeningHours;
+use OH_Opening_Hours\Entity\Set;
 
-$openingHours = OpeningHours::getInstance();
+$openingHours = OH_Opening_Hours::getInstance();
 
 // Retrieve Set with id 'my-set'
 $set = $openingHours->getSet('my-set'); // $set instanceof Set
@@ -45,7 +45,7 @@ $anotherSet = $openingHours->getSet('non-existing-set'); // $set == null
 $loadedSets = $openingHours->getSets(); // $loadedSets instanceof ArrayObject; Only contains already initialized Sets
 ```
 
-You also have to use the OpeningHours module to add new SetProviders. [(read more)](./set-providers.md)
+You also have to use the OH_Opening_Hours module to add new SetProviders. [(read more)](./set-providers.md)
 
 ## <a name="sets"></a> Sets
 Class [`OpeningHours\Entity\Set`](./../classes/OpeningHours/Entity/Set.php)
@@ -53,7 +53,7 @@ Class [`OpeningHours\Entity\Set`](./../classes/OpeningHours/Entity/Set.php)
 Sets contain Periods, Holidays and IrregularOpenings and offser methods to determine the opening status or the next open Period.
 
 ```php
-use OpeningHours\Util\ArrayObject;
+use OH_Opening_Hours\Util\ArrayObject;
 
 // Check whether Set is open
 // Checks for Periods, Holidays and Irregular Openings
@@ -84,7 +84,7 @@ whose date is by default the date in the current week-context.
 Week-context is aware your `start_of_week` WordPress setting.
 
 ```php
-use OpeningHours\Entity\Period;
+use OH_Opening_Hours\Entity\Period;
 
 // Now is 2016-10-06 12:00:00
 // Start of Week is Monday
@@ -130,7 +130,7 @@ $p1->equals($p2, true); // true
 Class [`OpeningHours\Entity\Holidays`](./../classes/OpeningHours/Entity/Holiday.php)
 
 ```php
-use OpeningHours\Entity\Holiday;
+use OH_Opening_Hours\Entity\Holiday;
 
 $holiday = new Holiday('My Holidays', new \DateTime('2016-10-02'), new \DateTime('2016-10-07'));
 $holiday->getName(); // 'My Holidays'
@@ -146,7 +146,7 @@ $holiday->isActive(new \DateTime('2016-10-08')); // false
 Class [`OpeningHours\Entity\IrregularOpening`](./../classes/OpeningHours/Entity/IrregularOpening.php)
 
 ```php
-use OpeningHours\Entity\IrregularOpening;
+use OH_Opening_Hours\Entity\IrregularOpening;
 
 $irregularOpening = new IrregularOpening('IO', '2016-10-03', '13:00', '17:00');
 $irregularOpening->getName(); // 'IO'
