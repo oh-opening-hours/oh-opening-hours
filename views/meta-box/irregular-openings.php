@@ -3,10 +3,10 @@
  * Opening Hours: View: Meta Box: IrregularOpenings
  */
 
-use OpeningHours\Module\CustomPostType\MetaBox\IrregularOpenings as MetaBox;
-use OpeningHours\Util\ViewRenderer;
+use OH_Opening_Hours\Module\CustomPostType\MetaBox\IrregularOpenings as MetaBox;
+use OH_Opening_Hours\Util\ViewRenderer;
 
-/** @var \OpeningHours\Entity\IrregularOpening[] $irregular_openings */
+/** @var \OH_Opening_Hours\Entity\IrregularOpening[] $irregular_openings */
 $irregular_openings = $this->data['irregular_openings'];
 ?>
 
@@ -14,36 +14,37 @@ $irregular_openings = $this->data['irregular_openings'];
 
 	<?php MetaBox::getInstance()->nonceField(); ?>
 
-	<table class="op-irregular-openings" id="op-io-table">
-		<thead>
-		<th>
+	<section class="op-irregular-openings" id="op-io-table">
+		<header>
+		<div class="col">
 			<?php esc_html_e( 'Name', 'oh-opening-hours' ); ?>
-		</th>
+		</div>
 
-		<th>
+		<div class="col">
 			<?php esc_html_e( 'Date', 'oh-opening-hours' ); ?>
-		</th>
+		</div>
 
-		<th>
+		<div class="col">
 			<?php esc_html_e( 'Time Start', 'oh-opening-hours' ); ?>
-		</th>
+		</div>
 
-		<th>
+		<div class="col">
 			<?php esc_html_e( 'Time End', 'oh-opening-hours' ); ?>
-		</th>
-		</thead>
+		</div>
+		<div class="col-remove"></div>
+		</header>
 
-		<tbody>
+		<div class="row-wrap row flex-direction-vertical">
 		<?php
 		foreach ($irregular_openings as $io) {
-			$view = new ViewRenderer(op_view_dir_path(MetaBox::TEMPLATE_PATH_SINGLE), array(
+			$view = new ViewRenderer(opoh_view_dir_path(MetaBox::TEMPLATE_PATH_SINGLE), array(
 				'io' => $io
 			));
 			$view->render();
 		}
 		?>
-		</tbody>
-	</table>
+		</div>
+	</section>
 
 	<button class="button button-primary button-add add-io">
 		<?php esc_html_e( 'Add New Irregular Opening', 'oh-opening-hours' ); ?>

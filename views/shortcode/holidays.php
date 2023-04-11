@@ -1,8 +1,8 @@
 <?php
 
-use OpeningHours\Entity\Holiday;
-use OpeningHours\Entity\Set;
-use OpeningHours\Util\Dates;
+use OH_Opening_Hours\Entity\Holiday;
+use OH_Opening_Hours\Entity\Set;
+use OH_Opening_Hours\Util\Dates;
 
 extract( $this->data['attributes'] );
 
@@ -27,32 +27,32 @@ extract( $this->data['attributes'] );
 if ( !count( $holidays ) )
 	return;
 
-echo $before_widget;
+echo wp_kses_post($before_widget);
 
 if ( ! empty( $title ) ) {
-	echo $before_title . esc_html( $title ) . $after_title;
+	echo wp_kses_post($before_title) . esc_html( $title ) . wp_kses_post($after_title);
 }
 
 ?>
-<table class="op-table op-table-holidays">
-  <tbody>
+<section class="op-table op-table-holidays">
+  <div class="row">
     <?php
     /** @var Holiday $holiday */
     foreach ($holidays as $holiday) :
     $highlighted = ($highlight && $holiday->isActive()) ? $class_highlighted : '';
     ?>
-    <tr class="<?php echo esc_attr( $class_holiday ); ?> <?php echo esc_html( $highlighted ); ?>">
-      <td class="col-name"><?php echo esc_html( $holiday->getName() ); ?></td>
+    <div class="<?php echo esc_attr( $class_holiday ); ?> <?php echo esc_html( $highlighted ); ?>">
+      <div class="col col-name"><?php echo esc_html( $holiday->getName() ); ?></div>
 
       <?php if (Dates::compareDate($holiday->getStart(), $holiday->getEnd()) === 0) : ?>
-        <td class="col-date" colspan="2"><?php echo esc_html( Dates::format($date_format, $holiday->getStart()) ); ?></td>
+        <div class="col col-date" colspan="2"><?php echo esc_html( Dates::format($date_format, $holiday->getStart()) ); ?></div>
       <?php else: ?>
-        <td class="col-date-start"><?php echo esc_html( Dates::format($date_format, $holiday->getStart()) ); ?></td>
-        <td class="col-date-end"><?php echo esc_html( Dates::format($date_format, $holiday->getEnd()) ); ?></td>
+        <div class="col col-date-start"><?php echo esc_html( Dates::format($date_format, $holiday->getStart()) ); ?></div>
+        <div class="col col-date-end"><?php echo esc_html( Dates::format($date_format, $holiday->getEnd()) ); ?></div>
       <?php endif; ?>
-    </tr>
+    </div>
     <?php endforeach; ?>
-  </tbody>
-</table>
+  </div>
+</section>
 
-<?php echo $after_widget; ?>
+<?php echo wp_kses_post($after_widget); ?>

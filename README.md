@@ -180,21 +180,21 @@ The Overview widget displays a table with all the opening hours in the speficied
 There are the following options:
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th>Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Title</td>
-			<td>The title of the Widget. Will be displayed above the opening hours</td>
-		</tr>
-		<tr>
-			<td>Set to show</td>
-			<td>Select the set whose opening hours you want to show</td>
-		</tr>
-		<tr>
-			<td>Highlight</td>
+	<header>
+		<div width="25%">Name</div>
+		<div class="col">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td>Title</div>
+			<td>The title of the Widget. Will be displayed above the opening hours</div>
+		</div>
+		<div>
+			<td>Set to show</div>
+			<td>Select the set whose opening hours you want to show</div>
+		</div>
+		<div>
+			<td>Highlight</div>
 			<td>
 			Select which type of information shall be highlighted.<br>
 			Possible options are:
@@ -203,67 +203,67 @@ There are the following options:
 				<li>Running Period</li>
 				<li>Current Weekday</li>
 			</ul>
-			</td>
-		</tr>
-		<tr>
-			<td>Show closed days</td>
-			<td>Whether to display a row for closed days with a "Closed"-caption</td>
-		</tr>
-		<tr>
-			<td>Show description</td>
-			<td>Whether to display the set description above the opening hours</td>
-		</tr>
-		<tr>
-			<td>Compress opening hours</td>
-			<td>Whether to compress the opening hours. This means that the plugin will search for days with mutual opening hours and then group those together to one row in the table with a title like "Monday - Wednesday".</td>
-		</tr>
-		<tr>
-			<td>Use short day captions</td>
-			<td>Whether to use abbreviations for weekdays. E.g. "Monday" becomes "Mon.". This feature is also available in all other supported languages.</td>
-		</tr>
-		<tr>
-			<td>Include Irregular Openings</td>
-			<td>If there is an irregular opening on any day in the table it will replace the regular opening hours with the irregular opening hours for that day.</td>
-		</tr>
-		<tr>
-			<td>Include Holidays</td>
-			<td>If there is a holiday during one or more days in the table it will replace the regular opening hours of those days with the name of the holiday.</td>
-		</tr>
-		<tr>
-			<td>Template</td>
-			<td>You can choose among two templates: Table and List. The list template will display all data in a vertical list. This is useful for narrow sidebars.</td>
-		</tr>
-	</tbody>
-	<thead>
-		<th colspan="2">Extended Settings</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Caption closed</td>
-			<td>Speficy a custom caption for closed days.</td>
-		</tr>
-		<tr>
-			<td>Highlighted period class</td>
-			<td>Custom CSS class for highlighted periods. default <code>highlighted</code></td>
-		</tr>
-		<tr>
-			<td>Highlighted day class</td>
-			<td>Custom CSS class for highlighted days. default: <code>highlighted</code></td>
-		</tr>
-		<tr>
-			<td>PHP Time Format</td>
-			<td>Custom format for times. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-		<tr>
-			<td>Hide date of irregular openings</td>
-			<td>Whether to hide the date of irregular openings if they are in the table.</td>
-		</tr>
-		<tr>
-			<td>Week offset</td>
-			<td>Number of weeks the shortcode data shall be offset. Might be a positive or negative integer.</td>
-		</tr>
-	</tbody>
-</table>
+			</div>
+		</div>
+		<div>
+			<td>Show closed days</div>
+			<td>Whether to display a row for closed days with a "Closed"-caption</div>
+		</div>
+		<div>
+			<td>Show description</div>
+			<td>Whether to display the set description above the opening hours</div>
+		</div>
+		<div>
+			<td>Compress opening hours</div>
+			<td>Whether to compress the opening hours. This means that the plugin will search for days with mutual opening hours and then group those together to one row in the table with a title like "Monday - Wednesday".</div>
+		</div>
+		<div>
+			<td>Use short day captions</div>
+			<td>Whether to use abbreviations for weekdays. E.g. "Monday" becomes "Mon.". This feature is also available in all other supported languages.</div>
+		</div>
+		<div>
+			<td>Include Irregular Openings</div>
+			<td>If there is an irregular opening on any day in the table it will replace the regular opening hours with the irregular opening hours for that day.</div>
+		</div>
+		<div>
+			<td>Include Holidays</div>
+			<td>If there is a holiday during one or more days in the table it will replace the regular opening hours of those days with the name of the holiday.</div>
+		</div>
+		<div>
+			<td>Template</div>
+			<td>You can choose among two templates: Table and List. The list template will display all data in a vertical list. This is useful for narrow sidebars.</div>
+		</div>
+	</div>
+	<header>
+		<div colspan="2">Extended Settings</div>
+	</header>
+	<div class="row">
+		<div>
+			<td>Caption closed</div>
+			<td>Speficy a custom caption for closed days.</div>
+		</div>
+		<div>
+			<td>Highlighted period class</div>
+			<td>Custom CSS class for highlighted periods. default <code>highlighted</code></div>
+		</div>
+		<div>
+			<td>Highlighted day class</div>
+			<td>Custom CSS class for highlighted days. default: <code>highlighted</code></div>
+		</div>
+		<div>
+			<td>PHP Time Format</div>
+			<td>Custom format for times. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+		<div>
+			<td>Hide date of irregular openings</div>
+			<td>Whether to hide the date of irregular openings if they are in the table.</div>
+		</div>
+		<div>
+			<td>Week offset</div>
+			<td>Number of weeks the shortcode data shall be offset. Might be a positive or negative integer.</div>
+		</div>
+	</div>
+</section>
 
 #### Overview Widget in table view
 ![Overview Widget Table](./doc/screenshots/widget-overview-table.png)
@@ -279,50 +279,50 @@ The Is Open Widget displays a message whether a venue (a Set) is currently open/
 There are the folliwing options:
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th>Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Title</td>
-			<td>The Widget Title</td>
-		</tr>
-		<tr>
-			<td>Set</td>
-			<td>Select a set whose opening status you want to show</td>
-		</tr>
-		<tr>
-			<td>Show next open period</td>
-			<td>When checked, a message telling the next open period will be displayed if the venue (set) is currently closed.</td>
-		</tr>
-		<tr>
-			<td>Show today's opening hours</td>
-			<td>Specify in which cases today's opening hours shall be displayed in the widget</td>
-		</tr>
-	</tbody>
-	<thead>
-		<th colspan="2">Extended Settings</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Caption if open</td>
-			<td>Custom caption to show when the venue is open</td>
-		</tr>
-		<tr>
-			<td>Caption if closed</td>
-			<td>Custom caption to show when the venue is closed</td>
-		</tr>
-		<tr>
-			<td>Class if open</td>
-			<td>Custom CSS class when the venue is open</td>
-		</tr>
-		<tr>
-			<td>Class if closed</td>
-			<td>Custom CSS class when the venue is closed</td>
-		</tr>
-		<tr>
-			<td>Next Period string format</td>
+	<header>
+		<div width="25%">Name</div>
+		<div class="col">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td>Title</div>
+			<td>The Widget Title</div>
+		</div>
+		<div>
+			<td>Set</div>
+			<td>Select a set whose opening status you want to show</div>
+		</div>
+		<div>
+			<td>Show next open period</div>
+			<td>When checked, a message telling the next open period will be displayed if the venue (set) is currently closed.</div>
+		</div>
+		<div>
+			<td>Show today's opening hours</div>
+			<td>Specify in which cases today's opening hours shall be displayed in the widget</div>
+		</div>
+	</div>
+	<header>
+		<div colspan="2">Extended Settings</div>
+	</header>
+	<div class="row">
+		<div>
+			<td>Caption if open</div>
+			<td>Custom caption to show when the venue is open</div>
+		</div>
+		<div>
+			<td>Caption if closed</div>
+			<td>Custom caption to show when the venue is closed</div>
+		</div>
+		<div>
+			<td>Class if open</div>
+			<td>Custom CSS class when the venue is open</div>
+		</div>
+		<div>
+			<td>Class if closed</div>
+			<td>Custom CSS class when the venue is closed</div>
+		</div>
+		<div>
+			<td>Next Period string format</div>
 			<td>A custom string format for the next open period message.<br />
 			You can populate the string with the following placeholders:
 			<ul>
@@ -332,10 +332,10 @@ There are the folliwing options:
 				<li><code>%4$s</code> The formatted end time of the next open period</li>
 			</ul>
 			Example: <code>We're open again on %2$s (%1$s) from %3$s to %4$s</code>
-			</td>
-		</tr>
-		<tr>
-			<td>Today' opening hours string format</td>
+			</div>
+		</div>
+		<div>
+			<td>Today' opening hours string format</div>
 			<td>A custom string format for the today's opening hours message.<br />
 			You can populate the string with the following placeholders:
 			<ul>
@@ -344,18 +344,18 @@ There are the folliwing options:
 				<li><code>%3$s</code> The formatted end time of the last period</li>
 			</ul>
 			Example: <code>We're open today from %2$s to %3$s.</code>
-			</td>
-		</tr>
-		<tr>
-			<td>PHP Date Format</td>
-			<td>Custom PHP date format for the date of the next open period. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-		<tr>
-			<td>PHP Time Format</td>
-			<td>Custom PHP date format for the start and end time of the next open period. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-	</tbody>
-</table>
+			</div>
+		</div>
+		<div>
+			<td>PHP Date Format</div>
+			<td>Custom PHP date format for the date of the next open period. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+		<div>
+			<td>PHP Time Format</div>
+			<td>Custom PHP date format for the start and end time of the next open period. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+	</div>
+</section>
 
 #### Is Open Widget showing next open Period
 ![Is Open Widget](./doc/screenshots/widget-is-open.png)
@@ -368,46 +368,46 @@ The holiday widget displays all holidays in the specified set in a table or list
 There are the following options:
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th>Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Title</td>
-			<td>The Widget title</td>
-		</tr>
-		<tr>
-			<td>Set</td>
-			<td>Select a set whose holidays you want to display.</td>
-		</tr>
-		<tr>
-			<td>Highlight active holidays</td>
-			<td>Whether to highlight active holidays in the table</td>
-		</tr>
-		<tr>
-			<td>Template</td>
-			<td>You can choose among two templates: Table and List. The list template will display all data in a vertical list. This is useful for narrow sidebars.</td>
-		</tr>
-		<tr>
-			<td>Include past holidays</td>
-			<td>Whether to show past holidays in the widget</td>
-		</tr>
-	</tbody>
-	<thead>
-		<th colspan="2">Extended Settings</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Class for highlighted Holiday</td>
-			<td>Custom CSS class for highlighted Holidays. default: <code>highlighted</code></td>
-		</tr>
-		<tr>
-			<td>PHP Date Format</td>
-			<td>Custom PHP date format for the start and end date of the holidays. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div class="col">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td>Title</div>
+			<td>The Widget title</div>
+		</div>
+		<div>
+			<td>Set</div>
+			<td>Select a set whose holidays you want to display.</div>
+		</div>
+		<div>
+			<td>Highlight active holidays</div>
+			<td>Whether to highlight active holidays in the table</div>
+		</div>
+		<div>
+			<td>Template</div>
+			<td>You can choose among two templates: Table and List. The list template will display all data in a vertical list. This is useful for narrow sidebars.</div>
+		</div>
+		<div>
+			<td>Include past holidays</div>
+			<td>Whether to show past holidays in the widget</div>
+		</div>
+	</div>
+	<header>
+		<div colspan="2">Extended Settings</div>
+	</header>
+	<div class="row">
+		<div>
+			<td>Class for highlighted Holiday</div>
+			<td>Custom CSS class for highlighted Holidays. default: <code>highlighted</code></div>
+		</div>
+		<div>
+			<td>PHP Date Format</div>
+			<td>Custom PHP date format for the start and end date of the holidays. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+	</div>
+</section>
 
 #### Holidays Widget in table view
 ![Holidays Widget in table view](./doc/screenshots/widget-holidays-table.png)
@@ -425,50 +425,50 @@ An Irregular Opening is reagarded as being in the past, when the full day, when 
 There are the following options:
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th>Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Title</td>
-			<td>The Widget title</td>
-		</tr>
-		<tr>
-			<td>Set</td>
-			<td>Select a Set whose Irregular Openings you want to show.</td>
-		</tr>
-		<tr>
-			<td>Highlight active Irregular Opening</td>
-			<td>Whether to highlight active irregular openings in the table or list</td>
-		</tr>
-		<tr>
-			<td>Template</td>
-			<td>You can choose among two templates: Table and List. The list template will display all data in a vertical list. This is useful for narrow sidebars.</td>
-		</tr>
-		<tr>
-			<td>Include past irregular openings</td>
-			<td>Whether to show past irregular openings in the widget</td>
-		</tr>
-	</tbody>
-	<thead>
-		<th colspan="2">Extended Settings</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Class for Highlighted Irregular Opening</td>
-			<td>Custom CSS class for highlighted Irregular Openings in the table or list. default: <code>highlighted</code></td>
-		</tr>
-		<tr>
-			<td>PHP Date Format</td>
-			<td>Custom PHP date format for the date of the irregular openings. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-		<tr>
-			<td>PHP Time Format</td>
-			<td>Custom PHP date format for the start and end time of the irregular openings. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div class="col">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td>Title</div>
+			<td>The Widget title</div>
+		</div>
+		<div>
+			<td>Set</div>
+			<td>Select a Set whose Irregular Openings you want to show.</div>
+		</div>
+		<div>
+			<td>Highlight active Irregular Opening</div>
+			<td>Whether to highlight active irregular openings in the table or list</div>
+		</div>
+		<div>
+			<td>Template</div>
+			<td>You can choose among two templates: Table and List. The list template will display all data in a vertical list. This is useful for narrow sidebars.</div>
+		</div>
+		<div>
+			<td>Include past irregular openings</div>
+			<td>Whether to show past irregular openings in the widget</div>
+		</div>
+	</div>
+	<header>
+		<div colspan="2">Extended Settings</div>
+	</header>
+	<div class="row">
+		<div>
+			<td>Class for Highlighted Irregular Opening</div>
+			<td>Custom CSS class for highlighted Irregular Openings in the table or list. default: <code>highlighted</code></div>
+		</div>
+		<div>
+			<td>PHP Date Format</div>
+			<td>Custom PHP date format for the date of the irregular openings. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+		<div>
+			<td>PHP Time Format</div>
+			<td>Custom PHP date format for the start and end time of the irregular openings. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+	</div>
+</section>
 
 #### Irregular Openings Widget in list view
 ![Irregular Openings Widget in list view](./doc/screenshots/widget-irregular-openings-list.png)
@@ -483,42 +483,42 @@ The **Schema.org Widget**adds a JSON-LD record to the WordPress site representin
 There are the following options:
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th>Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Set</td>
-			<td>The Set whose JSON-LD representation to insert</td>
-		</tr>
-		<tr>
-			<td>Exclude Holidays</td>
-			<td>When enabled, holidays are not considered for the SpecialOpeningHoursSpecification</td>
-		</tr>
-		<tr>
-			<td>Exclude Irregular Openings</td>
-			<td>When enabled, irregular openings are not considered for the SpecialOpeningHoursSpecification</td>
-		</tr>
-	</tbody>
-	<thead>
-		<th colspan="2">Extended Settings</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>@Type</code> property of the schema object</td>
-			<td>Custom override for the @type of the schema record. By default <a href="https://schema.org/Place" target="_blank">Place</a> is taken.</td>
-		</tr>
-		<tr>
-			<td><code>name</code> property of the schema object</td>
-			<td>Custom override for the <code>name</code> of the schema record. By default the name of the selected Set is taken.</td>
-		</tr>
-		<tr>
-			<td><code>description</code> property of the schema object</td>
-			<td>Custom override for the <code>description</code> of the schema record. By default the description of the selected Set is taken.</td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div class="col">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td>Set</div>
+			<td>The Set whose JSON-LD representation to insert</div>
+		</div>
+		<div>
+			<td>Exclude Holidays</div>
+			<td>When enabled, holidays are not considered for the SpecialOpeningHoursSpecification</div>
+		</div>
+		<div>
+			<td>Exclude Irregular Openings</div>
+			<td>When enabled, irregular openings are not considered for the SpecialOpeningHoursSpecification</div>
+		</div>
+	</div>
+	<header>
+		<div colspan="2">Extended Settings</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>@Type</code> property of the schema object</div>
+			<td>Custom override for the @type of the schema record. By default <a href="https://schema.org/Place" target="_blank">Place</a> is taken.</div>
+		</div>
+		<div>
+			<td><code>name</code> property of the schema object</div>
+			<td>Custom override for the <code>name</code> of the schema record. By default the name of the selected Set is taken.</div>
+		</div>
+		<div>
+			<td><code>description</code> property of the schema object</div>
+			<td>Custom override for the <code>description</code> of the schema record. By default the description of the selected Set is taken.</div>
+		</div>
+	</div>
+</section>
 
 #### Schema.org Widget options
 ![Schema.org Widget options](./doc/screenshots/widget-schema-options.png)
@@ -556,51 +556,51 @@ In the edit page of parent sets the button *Create a Shortcode* opens the shortc
 
 ### <a name="common-attributes"></a>Common attributes for all Shortcodes
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="15%">Type</th>
-		<th width="15%">Default</th>
-		<th width="45%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>set_id</code></td>
-			<td><code>int|string</code></td>
-			<td>–</td>
-			<td><strong>(required)</strong> The id of the set whose data you want to show. For regular Sets you may also use <a href="#getting-started-specify-set-alias">your custom Set Alias here</a></td>
-		</tr>
-		<tr>
-			<td><code>title</code></td>
-			<td><code>string</code></td>
-			<td>–</td>
-			<td>The widget title</td>
-		</tr>
-		<tr>
-			<td><code>before_title</code></td>
-			<td><code>string</code></td>
-			<td><code>&lt;h3 class="op-{name}-title"&gt;</code></td>
-			<td>HTML before the title. When using Widgets this will be overridden by the sidebar's <code>before_title</code> attribute.</td>
-		</tr>
-		<tr>
-			<td><code>after_title</code></td>
-			<td><code>string</code></td>
-			<td><code>&lt;/h3&gt;</code></td>
-			<td>HTML after the title. When using Widgets this will be overridden by the sidebar's <code>after_title</code> attribute.</td>
-		</tr>
-		<tr>
-			<td><code>before_widget</code></td>
-			<td><code>string</code></td>
-			<td><code>&lt;div class="op-{name}-shortcode"&gt;</code></td>
-			<td>HTML before shortcode contents. When using Widgets this will be overridden by the sidebar's <code>before_widget</code> attribute.</td>
-		</tr>
-		<tr>
-			<td><code>after_widget</code></td>
-			<td><code>string</code></td>
-			<td><code>&lt;/div&gt;</code></td>
-			<td>HTML after shortcode contents. When using Widgets this will be overridden by the sidebar's <code>after_widget</code> attribute.</td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div width="15%">Type</div>
+		<div width="15%">Default</div>
+		<div width="45%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>set_id</code></div>
+			<td><code>int|string</code></div>
+			<td>–</div>
+			<td><strong>(required)</strong> The id of the set whose data you want to show. For regular Sets you may also use <a href="#getting-started-specify-set-alias">your custom Set Alias here</a></div>
+		</div>
+		<div>
+			<td><code>title</code></div>
+			<td><code>string</code></div>
+			<td>–</div>
+			<td>The widget title</div>
+		</div>
+		<div>
+			<td><code>before_title</code></div>
+			<td><code>string</code></div>
+			<td><code>&lt;h3 class="op-{name}-title"&gt;</code></div>
+			<td>HTML before the title. When using Widgets this will be overridden by the sidebar's <code>before_title</code> attribute.</div>
+		</div>
+		<div>
+			<td><code>after_title</code></div>
+			<td><code>string</code></div>
+			<td><code>&lt;/h3&gt;</code></div>
+			<td>HTML after the title. When using Widgets this will be overridden by the sidebar's <code>after_title</code> attribute.</div>
+		</div>
+		<div>
+			<td><code>before_widget</code></div>
+			<td><code>string</code></div>
+			<td><code>&lt;div class="op-{name}-shortcode"&gt;</code></div>
+			<td>HTML before shortcode contents. When using Widgets this will be overridden by the sidebar's <code>before_widget</code> attribute.</div>
+		</div>
+		<div>
+			<td><code>after_widget</code></div>
+			<td><code>string</code></div>
+			<td><code>&lt;/div&gt;</code></div>
+			<td>HTML after shortcode contents. When using Widgets this will be overridden by the sidebar's <code>after_widget</code> attribute.</div>
+		</div>
+	</div>
+</section>
 
 ### <a name="op-overview-shortcode"></a>op-overview Shortcode
 Corresponds to the Overview Widget.  
@@ -608,102 +608,102 @@ The **[op-overview]** shortcode displays the opening hours of the specified set.
 The following attributes are available (Also mind the **[Common Attributes](#common-attributes)**):
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="15%">Type</th>
-		<th width="15%">Default</th>
-		<th width="45%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>show_closed_days</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Whether to display a row for closed days with a "Closed"-caption</td>
-		</tr>
-		<tr>
-			<td><code>caption_closed</code></td>
-			<td><code>string</code></td>
-			<td><code>Closed</code></td>
-			<td>Change the text of the closed caption</td>
-		</tr>
-		<tr>
-			<td><code>show_description</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Whether to display the set description above the opening hours</td>
-		</tr>
-		<tr>
-			<td><code>highlight</code></td>
-			<td><code>string</code></td>
-			<td><code>noting</code></td>
-			<td>What type of information to highlight. Possible values are: <code>noting</code>, <code>period</code> (currently active period), <code>day</code> (current weekday)</td>
-		</tr>
-		<tr>
-			<td><code>compress</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Whether to compress the opening hours. This means that the plugin will search for days with mutual opening hours and then group those together to one row in the table with a title like "Monday - Wednesday".</td>
-		</tr>
-		<tr>
-			<td><code>short</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Whether to use abbreviations for weekdays. E.g. "Monday" becomes "Mon.". This feature is also available in all other supported languages.</td>
-		</tr>
-		<tr>
-			<td><code>include_io</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>If there is an irregular opening on any day in the table it will replace the regular opening hours with the irregular opening hours for that day.</td>
-		</tr>
-		<tr>
-			<td><code>include_holidays</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>If there is a holiday during one or more days in the table it will replace the regular opening hours of those days with the name of the holiday.</td>
-		</tr>
-		<tr>
-			<td><code>highlighted_period_class</code></td>
-			<td><code>string</code></td>
-			<td><code>highlighted</code></td>
-			<td>CSS class for highlighted periods</td>
-		</tr>
-		<tr>
-			<td><code>highlighted_day_class</code></td>
-			<td><code>string</code></td>
-			<td><code>highlighted</code></td>
-			<td>CSS class for current weekday</td>
-		</tr>
-		<tr>
-			<td><code>time_format</code></td>
-			<td><code>string</code></td>
-			<td>WordPress setting</td>
-			<td>Custom format for times. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-		<tr>
-			<td><code>hide_io_date</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Whether to hide the date of irregular openings if they are in the table.</td>
-		</tr>
-		<tr>
-			<td><code>template</code></td>
-			<td><code>string</code></td>
-			<td><code>table</code></td>
-			<td>Identifier for the template to use. Possible values are <code>table</code> and <code>list</code></td>
-		</tr>
-		<tr>
-			<td><code>week_offset</code></td>
-			<td><code>int</code></td>
-			<td><code>0</code></td>
+	<header>
+		<div width="25%">Name</div>
+		<div width="15%">Type</div>
+		<div width="15%">Default</div>
+		<div width="45%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>show_closed_days</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Whether to display a row for closed days with a "Closed"-caption</div>
+		</div>
+		<div>
+			<td><code>caption_closed</code></div>
+			<td><code>string</code></div>
+			<td><code>Closed</code></div>
+			<td>Change the text of the closed caption</div>
+		</div>
+		<div>
+			<td><code>show_description</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Whether to display the set description above the opening hours</div>
+		</div>
+		<div>
+			<td><code>highlight</code></div>
+			<td><code>string</code></div>
+			<td><code>noting</code></div>
+			<td>What type of information to highlight. Possible values are: <code>noting</code>, <code>period</code> (currently active period), <code>day</code> (current weekday)</div>
+		</div>
+		<div>
+			<td><code>compress</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Whether to compress the opening hours. This means that the plugin will search for days with mutual opening hours and then group those together to one row in the table with a title like "Monday - Wednesday".</div>
+		</div>
+		<div>
+			<td><code>short</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Whether to use abbreviations for weekdays. E.g. "Monday" becomes "Mon.". This feature is also available in all other supported languages.</div>
+		</div>
+		<div>
+			<td><code>include_io</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>If there is an irregular opening on any day in the table it will replace the regular opening hours with the irregular opening hours for that day.</div>
+		</div>
+		<div>
+			<td><code>include_holidays</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>If there is a holiday during one or more days in the table it will replace the regular opening hours of those days with the name of the holiday.</div>
+		</div>
+		<div>
+			<td><code>highlighted_period_class</code></div>
+			<td><code>string</code></div>
+			<td><code>highlighted</code></div>
+			<td>CSS class for highlighted periods</div>
+		</div>
+		<div>
+			<td><code>highlighted_day_class</code></div>
+			<td><code>string</code></div>
+			<td><code>highlighted</code></div>
+			<td>CSS class for current weekday</div>
+		</div>
+		<div>
+			<td><code>time_format</code></div>
+			<td><code>string</code></div>
+			<td>WordPress setting</div>
+			<td>Custom format for times. The default is your standard WordPress setting. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+		<div>
+			<td><code>hide_io_date</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Whether to hide the date of irregular openings if they are in the table.</div>
+		</div>
+		<div>
+			<td><code>template</code></div>
+			<td><code>string</code></div>
+			<td><code>table</code></div>
+			<td>Identifier for the template to use. Possible values are <code>table</code> and <code>list</code></div>
+		</div>
+		<div>
+			<td><code>week_offset</code></div>
+			<td><code>int</code></div>
+			<td><code>0</code></div>
 			<td>
 				Number of weeks the shortcode data shall be offset. Might be a positive or negative integer.<br />
 				<strong>Example:</strong> <code>1</code>: Show data of next week
-			</td>
-		</tr>
-	</tbody>
-</table>
+			</div>
+		</div>
+	</div>
+</section>
 
 ### <a name="op-is-open-shortcode"></a>op-is-open Shortcode
 Corresponds to the Is Open Widget.  
@@ -711,44 +711,44 @@ The **[op-is-open]** shortcode displays a message whether the specified venue (s
 The following attributes are available (Also mind the **[Common Attributes](#common-attributes)**):
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="15%">Type</th>
-		<th width="15%">Default</th>
-		<th width="45%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>open_text</code></td>
-			<td><code>string</code></td>
-			<td>We're currently open (translated)</td>
-			<td>Caption to show when the venue is open</td>
-		</tr>
-		<tr>
-			<td><code>closed_text</code></td>
-			<td><code>string</code></td>
-			<td>We're currently closed (translated)</td>
-			<td>Caption to show when the venue is closed</td>
-		</tr>
-		<tr>
-			<td><code>closed_holiday_text</code></td>
-			<td><code>string</code></td>
-			<td>We\'re currently closed for <code>%1$s</code>. (translated)</td>
+	<header>
+		<div width="25%">Name</div>
+		<div width="15%">Type</div>
+		<div width="15%">Default</div>
+		<div width="45%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>open_text</code></div>
+			<td><code>string</code></div>
+			<td>We're currently open (translated)</div>
+			<td>Caption to show when the venue is open</div>
+		</div>
+		<div>
+			<td><code>closed_text</code></div>
+			<td><code>string</code></div>
+			<td>We're currently closed (translated)</div>
+			<td>Caption to show when the venue is closed</div>
+		</div>
+		<div>
+			<td><code>closed_holiday_text</code></div>
+			<td><code>string</code></div>
+			<td>We\'re currently closed for <code>%1$s</code>. (translated)</div>
 			<td>Caption to show when the venue is closed and if there is one or more holidays, show them in a comma separated list<br><strong>Note:</strong> <code>show_closed_holidays</code> must be set to <code>true</code> for this to be displayed.<br>
 			<ul>
 				<li><code>%1$s</code> A comma separated formatted string of todays holiday(s)</li>
-			</ul></td>
-		</tr>
-		<tr>
-			<td><code>show_next</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>When <code>true</code>, a message telling the next open period will be displayed if the venue (set) is currently closed.</td>
-		</tr>
-		<tr>
-			<td><code>show_today</code></td>
-			<td><code>string (enum)</code></td>
-			<td><code>never</code></td>
+			</ul></div>
+		</div>
+		<div>
+			<td><code>show_next</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>When <code>true</code>, a message telling the next open period will be displayed if the venue (set) is currently closed.</div>
+		</div>
+		<div>
+			<td><code>show_today</code></div>
+			<td><code>string (enum)</code></div>
+			<td><code>never</code></div>
 			<td>
 				When to show today's opening hours<br />
 				The following values are valid:
@@ -757,18 +757,18 @@ The following attributes are available (Also mind the **[Common Attributes](#com
 					<li><code>open</code></li>
 					<li><code>always</code></li>
 				</ul>
-			</td>
-		</tr>
-		<tr>
-			<td><code>show_closed_holidays</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Show today's holiday name(s) when closed</td>
-		</tr>
-		<tr>
-			<td><code>next_format</code></td>
-			<td><code>string</code></td>
-			<td>We're open again on <code>%2$s</code> (<code>%1$s</code>) from <code>%3$s</code> to <code>%4$s</code></td>
+			</div>
+		</div>
+		<div>
+			<td><code>show_closed_holidays</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Show today's holiday name(s) when closed</div>
+		</div>
+		<div>
+			<td><code>next_format</code></div>
+			<td><code>string</code></div>
+			<td>We're open again on <code>%2$s</code> (<code>%1$s</code>) from <code>%3$s</code> to <code>%4$s</code></div>
 			<td>A custom string format for the next open period message.<br />
 			You can populate the string with the following placeholders:
 			<ul>
@@ -776,46 +776,46 @@ The following attributes are available (Also mind the **[Common Attributes](#com
 				<li><code>%2$s</code> The name of the weekday of the next open period (translated)</li>
 				<li><code>%3$s</code> The formatted start time of the next open period</li>
 				<li><code>%4$s</code> The formatted end time of the next open period</li>
-			</ul></td>
-		</tr>
-		<tr>
-			<td><code>today_format</code></td>
-			<td><code>string</code></td>
-			<td>Opening Hours today: <code>%1$s</code></td>
+			</ul></div>
+		</div>
+		<div>
+			<td><code>today_format</code></div>
+			<td><code>string</code></div>
+			<td>Opening Hours today: <code>%1$s</code></div>
 			<td>A custom string format for the today's opening hours message.<br />
 			You can populate the string with the following placeholders:
 			<ul>
 				<li><code>%1$s</code> The formatted time ranges of all periods</li>
 				<li><code>%2$s</code> The formatted start time of the first period</li>
 				<li><code>%3$s</code> The formatted end time of the last period</li>
-			</ul></td>
-		</tr>
-		<tr>
-			<td><code>open_class</code></td>
-			<td><code>string</code></td>
-			<td><code>op-open</code></td>
-			<td>CSS class if the venue (set) is open</td>
-		</tr>
-		<tr>
-			<td><code>closed_class</code></td>
-			<td><code>string</code></td>
-			<td><code>op-closed</code></td>
-			<td>CSS class if the venue (set) is closed</td>
-		</tr>
-		<tr>
-			<td><code>date_format</code></td>
-			<td><code>string</code></td>
-			<td>WordPress setting</td>
-			<td>PHP date format for the date of the next open period. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-		<tr>
-			<td><code>time_format</code></td>
-			<td><code>string</code></td>
-			<td>WordPress setting</td>
-			<td>PHP date format for the start and end time of the next open period. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-	</tbody>
-</table>
+			</ul></div>
+		</div>
+		<div>
+			<td><code>open_class</code></div>
+			<td><code>string</code></div>
+			<td><code>op-open</code></div>
+			<td>CSS class if the venue (set) is open</div>
+		</div>
+		<div>
+			<td><code>closed_class</code></div>
+			<td><code>string</code></div>
+			<td><code>op-closed</code></div>
+			<td>CSS class if the venue (set) is closed</div>
+		</div>
+		<div>
+			<td><code>date_format</code></div>
+			<td><code>string</code></div>
+			<td>WordPress setting</div>
+			<td>PHP date format for the date of the next open period. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+		<div>
+			<td><code>time_format</code></div>
+			<td><code>string</code></div>
+			<td>WordPress setting</div>
+			<td>PHP date format for the start and end time of the next open period. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+	</div>
+</section>
 
 ### <a name="op-holidays-shortcode"></a>op-holidays Shortcode
 Corresponds to the Holidays Widget.  
@@ -823,51 +823,51 @@ The **[op-holidays]** shortcode displays all holidays in the specified set in a 
 The following attributes are available (Also mind the **[Common Attributes](#common-attributes)**):
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="15%">Type</th>
-		<th width="15%">Default</th>
-		<th width="45%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>highlight</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Whether to highlight currently active holidays</td>
-		</tr>
-		<tr>
-			<td><code>include_past</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Whether to include past holidays</td>
-		</tr>
-		<tr>
-			<td><code>class_holiday</code></td>
-			<td><code>string</code></td>
-			<td><code>op-holiday</code></td>
-			<td>CSS class for a single holiday</td>
-		</tr>
-		<tr>
-			<td><code>class_highlighted</code></td>
-			<td><code>string</code></td>
-			<td><code>highlighted</code></td>
-			<td>CSS class for highlighted holidays</td>
-		</tr>
-		<tr>
-			<td><code>date_format</code></td>
-			<td><code>string</code></td>
-			<td>WordPress setting</td>
-			<td>PHP date format for the start and end date of the holidays. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-		<tr>
-			<td><code>template</code></td>
-			<td><code>string</code></td>
-			<td><code>table</code></td>
-			<td>Identifier for the template to use. Possible values are <code>table</code> and <code>list</code></td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div width="15%">Type</div>
+		<div width="15%">Default</div>
+		<div width="45%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>highlight</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Whether to highlight currently active holidays</div>
+		</div>
+		<div>
+			<td><code>include_past</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Whether to include past holidays</div>
+		</div>
+		<div>
+			<td><code>class_holiday</code></div>
+			<td><code>string</code></div>
+			<td><code>op-holiday</code></div>
+			<td>CSS class for a single holiday</div>
+		</div>
+		<div>
+			<td><code>class_highlighted</code></div>
+			<td><code>string</code></div>
+			<td><code>highlighted</code></div>
+			<td>CSS class for highlighted holidays</div>
+		</div>
+		<div>
+			<td><code>date_format</code></div>
+			<td><code>string</code></div>
+			<td>WordPress setting</div>
+			<td>PHP date format for the start and end date of the holidays. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+		<div>
+			<td><code>template</code></div>
+			<td><code>string</code></div>
+			<td><code>table</code></div>
+			<td>Identifier for the template to use. Possible values are <code>table</code> and <code>list</code></div>
+		</div>
+	</div>
+</section>
 
 ### <a name="op-irregular-openings-shortcode"></a>op-irregular-openings Shortcode
 Corresponds to the Irregular Openings Widget.  
@@ -875,51 +875,51 @@ The **[op-irregular-openings]** shortcode displays all irregular openings in the
 The following attributes are available (Also mind the **[Common Attributes](#common-attributes)**):
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="15%">Type</th>
-		<th width="15%">Default</th>
-		<th width="45%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>highlight</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Whether to highlight currently active irregular openings.</td>
-		</tr>
-		<tr>
-			<td><code>include_past</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Whether to include past irregular openings</td>
-		</tr>
-		<tr>
-			<td><code>class_highlighted</code></td>
-			<td><code>string</code></td>
-			<td><code>highlighted</code></td>
-			<td>CSS class for highlighted irregular openings</td>
-		</tr>
-		<tr>
-			<td><code>date_format</code></td>
-			<td><code>string</code></td>
-			<td>WordPress setting</td>
-			<td>PHP date format for the date of the irregular openings. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-		<tr>
-			<td><code>time_format</code></td>
-			<td><code>string</code></td>
-			<td>WordPress setting</td>
-			<td>PHP date format for the start and end time of the irregular openings. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></td>
-		</tr>
-		<tr>
-			<td><code>template</code></td>
-			<td><code>string</code></td>
-			<td><code>table</code></td>
-			<td>Identifier for the template to use. Possible values are <code>table</code> and <code>list</code></td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div width="15%">Type</div>
+		<div width="15%">Default</div>
+		<div width="45%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>highlight</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Whether to highlight currently active irregular openings.</div>
+		</div>
+		<div>
+			<td><code>include_past</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>Whether to include past irregular openings</div>
+		</div>
+		<div>
+			<td><code>class_highlighted</code></div>
+			<td><code>string</code></div>
+			<td><code>highlighted</code></div>
+			<td>CSS class for highlighted irregular openings</div>
+		</div>
+		<div>
+			<td><code>date_format</code></div>
+			<td><code>string</code></div>
+			<td>WordPress setting</div>
+			<td>PHP date format for the date of the irregular openings. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+		<div>
+			<td><code>time_format</code></div>
+			<td><code>string</code></div>
+			<td>WordPress setting</div>
+			<td>PHP date format for the start and end time of the irregular openings. <a href="http://bit.ly/16Wsegh" target="_blank">More on PHP date and time formats</a></div>
+		</div>
+		<div>
+			<td><code>template</code></div>
+			<td><code>string</code></div>
+			<td><code>table</code></div>
+			<td>Identifier for the template to use. Possible values are <code>table</code> and <code>list</code></div>
+		</div>
+	</div>
+</section>
 
 ### <a name="op-schema-shortcode"></a>op-schema Shortcode
 Corresponds to the Schema.org Widget.  
@@ -927,51 +927,51 @@ The **[op-schema]** shortcode adds a JSON-LD record to the WordPress site repres
 The following attributes are available (**This shortcode does not process the [Common Attributes](#common-attributes)**):
 
 <table>
-	<thead>
-		<th width="25%">Name</th>
-		<th width="15%">Type</th>
-		<th width="15%">Default</th>
-		<th width="45%">Description</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>set_id</code></td>
-			<td><code>number|string</code></td>
-			<td>none</td>
-			<td>The Set id or Set alias of the set</td>
-		</tr>
-		<tr>
-			<td><code>exclude_holidays</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>When enabled, holidays are not considered for <code>specialOpeningHoursSpecification</code></td>
-		</tr>
-		<tr>
-			<td><code>exclude_irregular_openings</code></td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>When enabled, irregular openings are not considered for <code>specialOpeningHoursSpecification</code></td>
-		</tr>
-		<tr>
-			<td><code>schema_attr_type</code></td>
-			<td><code>string</code></td>
-			<td><code>Place</code></td>
-			<td>The <code>@type</code> property of the schema.org object.</td>
-		</tr>
-		<tr>
-			<td><code>schema_attr_name</code></td>
-			<td><code>string</code></td>
-			<td>Name of the seleted Set</td>
-			<td>The <code>name</code> property of the schema.org object.</td>
-		</tr>
-		<tr>
-			<td><code>schema_attr_description</code></td>
-			<td><code>string</code></td>
-			<td>Description of the selected Set</td>
-			<td>The <code>name</code> property of the schema.org object.</td>
-		</tr>
-	</tbody>
-</table>
+	<header>
+		<div width="25%">Name</div>
+		<div width="15%">Type</div>
+		<div width="15%">Default</div>
+		<div width="45%">Description</div>
+	</header>
+	<div class="row">
+		<div>
+			<td><code>set_id</code></div>
+			<td><code>number|string</code></div>
+			<td>none</div>
+			<td>The Set id or Set alias of the set</div>
+		</div>
+		<div>
+			<td><code>exclude_holidays</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>When enabled, holidays are not considered for <code>specialOpeningHoursSpecification</code></div>
+		</div>
+		<div>
+			<td><code>exclude_irregular_openings</code></div>
+			<td><code>bool</code></div>
+			<td><code>false</code></div>
+			<td>When enabled, irregular openings are not considered for <code>specialOpeningHoursSpecification</code></div>
+		</div>
+		<div>
+			<td><code>schema_attr_type</code></div>
+			<td><code>string</code></div>
+			<td><code>Place</code></div>
+			<td>The <code>@type</code> property of the schema.org object.</div>
+		</div>
+		<div>
+			<td><code>schema_attr_name</code></div>
+			<td><code>string</code></div>
+			<td>Name of the seleted Set</div>
+			<td>The <code>name</code> property of the schema.org object.</div>
+		</div>
+		<div>
+			<td><code>schema_attr_description</code></div>
+			<td><code>string</code></div>
+			<td>Description of the selected Set</div>
+			<td>The <code>name</code> property of the schema.org object.</div>
+		</div>
+	</div>
+</section>
 
 [↑ Table of Contents](#contents)
 
@@ -994,49 +994,6 @@ To disable the styling of the text color the [`op_use_front_end_styles`](https:/
 
 The development of the Opening Hours Plugin takes place at [GitHub](https://github.com/oh-opening-hours/oh-opening-hours).  
 If you want to contribute feel free to fork the repository and send pull requests.
-
-##### <a name="git-flow"></a>GitFlow
-The project uses GitFlow. You can get more information on GitFlow on the [GitFlow Cheat Sheet](http://danielkummer.github.io/git-flow-cheatsheet/).  
-When forking the repository for contributions please fork from the `develop` branch. If the pull request will be accepted it will be released to the `master` branch for a new version of the Plugin.
-
-##### Unit Testing
-The core logic of the Plugin (classes that are not in the `OpeningHours\Module` namespace) is covered with [PHPUnit](https://phpunit.de/) tests (version 4.8).  
-If you find an issue in the core logic please write one or more unit test which demonstrate this issue. If you add something to the core logic please also write a unit test. Also, before sending a pull request, run all unit tests to check whether your change has broken anything (it will be automatically tested by travis anyway).
-
-### <a name="contributing-to-translations"></a>Contribute to Translations
-
-(Plugin) translation files (`.po` and `.mo`) files contain translations for all strings that are included in the plugin source code, e.g. labels for the widget edit inputs. In this plugin this are mostly strings that occur in the WordPress admin.  
-This means you can customize every string presented on your WordPress Front-End site using Widget and/or Shortcode options. If the Plugin has not yet been translated to your language and you are fine with English in your WordPress admin you do not have to submit your own translations but can cutomize the Widget/Shortcode strings to match the language of your site.
-However, you can still submit your translations to [Polyglots](#polyglots) so other Plugin users can benefit from it.
-
-The translations of weekdays are not included in the Plugin translations but are loaded from the WordPress core translations. This serves the purpose, that these are always translated to the language that your WordPress installation runs on independently of the Plugin translation progress.
-
-#### <a name="polyglots"></a>[WordPress Polyglots](https://translate.wordpress.org/projects/wp-plugins/oh-opening-hours)
-Polyglots is the name of the community of volunteers translating WordPress resources like Themes, Plugins and also the WordPress core. It has become a central place for WordPress translation and is tightly coupled with the WordPress Theme/Plugin repositories.
-
-Since version 2.0 the translation of the Opening Hours Plugin takes place at [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/oh-opening-hours). Advantages of using Polyglots:
-
-* Larger translation community
-* Translation can be separated from the actual development of the Plugin
-* Supports automatic translation updates, so you do not have to wait for the next release to get new translations
-
-If you want to contribute to translations and there is no Project Translation Editor for your locale, please drop me a message or open an issue with your WordPress.org username and I will request an editorship for your locale.  
-You can find out more about project translation roles [here.](https://make.wordpress.org/polyglots/handbook/about/teams/)  
-
-If you have already translated the Plugin on translate.jannikportz.de, I have transferred all translations to the [translate.wordpress.org project](https://translate.wordpress.org/projects/wp-plugins/oh-opening-hours).
-You will then also need to become a Project Translation Editor to approve your translations (I know this is a bit tedious).
-So in this case please also drop me a message or open an issue with your WordPress.org account name.
-
-If you can not translate the whole plugin or don't want to wait until everything is approved you may perform the following steps to immediately use your translations.
-
-1. Select the translation set in the list of available languages.
-1. Scroll to the bottom.
-1. In the line below the legend, select `all current` as `Machine Object Message (.mo)` and click `Export`.
-1. Rename the file to `oh-opening-hours-{locale}.mo` (replace `{locale}` with the actual locale of the translation, e.g. `de_DE` for German).
-1. Move the file to `/path/to/wordpress/wp-content/languages/plugins`
-
-#### Pull Request on GitHub
-Translations via Pull Request on GitHub are no longer supported and won't be merged in the future, as translation now takes place at WordPress Polyglots. Please refer to [the section on WordPress Polyglots](#polyglots)
 
 [↑ Table of Contents](#contents)
 

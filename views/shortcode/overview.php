@@ -1,7 +1,7 @@
 <?php
 
-use OpeningHours\Entity\Set;
-use OpeningHours\Module\OpeningHours;
+use OH_Opening_Hours\Entity\Set;
+use OH_Opening_Hours\Module\OH_Opening_Hours;
 
 extract( $this->data['attributes'] );
 
@@ -20,28 +20,28 @@ extract( $this->data['attributes'] );
  * @var       $set                Set whose Opening Hours to show
  */
 
-echo $before_widget;
+echo wp_kses_post($before_widget);
 
 if ( $title ) {
-	echo $before_title . esc_html( $title ) . $after_title;
+	echo wp_kses_post($before_title) . esc_html( $title ) . wp_kses_post($after_title);
 }
 
 $description = $set->getDescription();
 ?>
 
-<table class="op-table op-table-overview">
+<section class="op-table op-table-overview">
   <?php if ($show_description && !empty($description)) : ?>
-    <tr class="op-row op-row-description">
-      <td class="op-cell op-cell-description" colspan="2"><?php echo esc_html( $description ) ?></td>
-    </tr>
+    <div class="op-row op-row-description">
+      <div class="col op-cell op-cell-description" colspan="2"><?php echo esc_html( $description ) ?></div>
+    </div>
   <?php endif; ?>
 
   <?php foreach ($days as $dayData) : ?>
-  <tr class="op-row op-row-day <?php echo esc_attr( $dayData['highlightedDayClass'] ); ?>">
-    <th class="op-cell op-cell-heading" scope="row"><?php echo $dayData['dayCaption']; ?></th>
-    <td class="op-cell op-cell-periods"><?php echo $dayData['periodsMarkup']; ?></td>
-  </tr>
+  <div class="op-row op-row-day <?php echo esc_attr( $dayData['highlightedDayClass'] ); ?>">
+    <div class="op-cell op-cell-heading" scope="row"><?php echo esc_html($dayData['dayCaption']); ?></div>
+    <div class="col op-cell op-cell-periods"><?php echo wp_kses_post($dayData['periodsMarkup']); ?></div>
+  </div>
   <?php endforeach; ?>
-</table>
+</section>
 
-<?php echo $after_widget; ?>
+<?php echo wp_kses_post($after_widget); ?>

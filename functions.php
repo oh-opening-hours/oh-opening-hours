@@ -6,12 +6,12 @@
  * @return      array|bool                  When $return_type === false the function returns only a boolean
  *                                          When $return_type === true returns an array opening status as first element and type as second element
  *
- * @deprecated  Use OpeningHours\Entity\Set::isOpen() instead
+ * @deprecated  Use OH_Opening_Hours\Entity\Set::isOpen() instead
  */
 
 function is_open($return_type = false) {
   $posts = get_posts(array(
-    'post_type' => \OpeningHours\Module\CustomPostType\Set::CPT_SLUG,
+    'post_type' => \OH_Opening_Hours\Module\CustomPostType\Set::CPT_SLUG,
     'numberposts' => 1,
     'post_parent' => 0,
     'orderby' => 'menu_order',
@@ -22,7 +22,7 @@ function is_open($return_type = false) {
     return $return_type ? array(false, 'period') : false;
   }
 
-  $set = \OpeningHours\Module\OpeningHours::getInstance()->getSet($posts[0]->ID);
+  $set = \OH_Opening_Hours\Module\OH_Opening_Hours::getInstance()->getSet($posts[0]->ID);
 
   $type = 'period';
   if ($return_type) {
@@ -43,7 +43,7 @@ function is_open($return_type = false) {
  * @return      array|bool                  When $return_type === false the function returns only a boolean
  *                                          When $return_type === true returns an array opening status as first element and type as second element
  *
- * @deprecated  Use OpeningHours\Entity\Set::isOpen() instead
+ * @deprecated  Use OH_Opening_Hours\Entity\Set::isOpen() instead
  */
 function is_closed($return_type = false) {
   $isOpen = is_open($return_type);

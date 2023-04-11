@@ -1,30 +1,31 @@
 <?php
-use OpeningHours\Module\CustomPostType\MetaBox\Holidays;
+use OH_Opening_Hours\Module\CustomPostType\MetaBox\Holidays;
 
 $holidays = Holidays::getInstance();
 ?>
 
 <div id="op-holidays-wrap">
 	<?php Holidays::getInstance()->nonceField(); ?>
-	<table class="op-holidays" id="op-holidays-table">
-		<thead>
-		<th>
+	<section class="op-holidays" id="op-holidays-table">
+		<header>
+		<div class="col">
 			<?php esc_html_e( 'Name', 'oh-opening-hours' ); ?>
-		</th>
+		</div>
 
-		<th>
+		<div class="col">
 			<?php esc_html_e( 'Date Start', 'oh-opening-hours' ); ?>
-		</th>
+		</div>
 
-		<th>
+		<div class="col">
 			<?php esc_html_e( 'Date End', 'oh-opening-hours' ); ?>
-		</th>
-		</thead>
+		</div>
+		<div class="col-remove"></div>
+		</header>
 
-		<tbody>
+		<div class="row-wrap row flex-direction-vertical">
 		<?php foreach ( $this->data['holidays'] as $holiday ) $holidays->renderSingleHoliday( $holiday ); ?>
-		</tbody>
-	</table>
+		</div>
+	</section>
 
 	<button class="button button-primary button-add add-holiday">
 		<?php esc_html_e( 'Add New Holiday', 'oh-opening-hours' ); ?>

@@ -13,28 +13,26 @@
 if (!defined('ABSPATH')) {
   die('Access denied.');
 }
-use \YeEasyAdminNotices\V1\AdminNotice;
 
-define('OP_NAME', 'Opening Hours');
-define('OP_REQUIRED_PHP_VERSION', '8.0');
-define('OP_REQUIRED_WP_VERSION', '6.0');
+define('OPOH_NAME', 'Opening Hours');
+define('OPOH_MIN_PHP_VERSION', '8.1');
+define('OPOH_MIN_WP_VERSION', '6.0');
+define('OPOH_PLUGIN_ROOT', plugin_dir_path( __FILE__ ));
+define('OPOH_PLUGIN_ABSOLUTE', __FILE__ );
 
-require_once dirname(__FILE__) . '/includes/admin-notices/AdminNotice.php';
 
-function op_admin_notice_php_version() {
-  AdminNotice::create()
-    ->warning('Warning')
-    ->text(__('Plugin '.OP_NAME.' requires at least PHP Version '.OP_REQUIRED_PHP_VERSION.'. Your Installation of WordPress is currently running on PHP '.PHP_VERSION, 'oh-opening-hours'))
-    ->show();
+function opoh_admin_notice_php_version() {
+  $class = 'notice notice-warning';
+	$message = __( 'Plugin '.OPOH_NAME.' requires at least PHP Version '.OPOH_MIN_PHP_VERSION.'. Your Installation of WordPress is currently running on PHP '.PHP_VERSION, 'oh-opening-hours' );
+	printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 }
 
 
-function op_admin_notice_wp_version() {
+function opoh_admin_notice_wp_version() {
   global $wp_version;
-  AdminNotice::create()
-    ->warning('Warning')
-    ->text(__('Plugin '.OP_NAME.' requires at least WordPress version '.OP_REQUIRED_WP_VERSION.'. Your Installation of WordPress is running on WordPress '.$wp_version, 'oh-opening-hours'))
-    ->show();
+  $class = 'notice notice-warning';
+	$message = __( 'Plugin '.OPOH_NAME.' requires at least WordPress version '.OPOH_MIN_WP_VERSION.'. Your Installation of WordPress is running on WordPress '.$wp_version, 'oh-opening-hours' );
+	printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 }
 
 
@@ -43,16 +41,16 @@ function op_admin_notice_wp_version() {
  *
  * @return      bool      Whether System requirements are met
  */
-function op_requirements() {
+function opoh_requirements() {
   global $wp_version;
 
-  if (version_compare(PHP_VERSION, OP_REQUIRED_PHP_VERSION, '<')) {
-    add_action('admin_init', 'op_admin_notice_php');
+  if (version_compare(PHP_VERSION, OPOH_MIN_PHP_VERSION, '<')) {
+    add_action('admin_notices', 'opoh_admin_notice_php_version');
     return false;
   }
 
-  if (version_compare($wp_version, OP_REQUIRED_WP_VERSION, '<')) {
-    add_action('admin_init', 'op_admin_notice_wp');
+  if (version_compare($wp_version, OPOH_MIN_WP_VERSION, '<')) {
+    add_action('admin_notices', 'opoh_admin_notice_wp_version');
     return false;
   }
 
@@ -65,7 +63,7 @@ function op_requirements() {
 }
 
 /** Returns Plugin Directory Path */
-function op_plugin_dir_path() {
+function opoh_plugin_dir_path() {
   return plugin_dir_path(__FILE__);
 }
 
@@ -76,12 +74,12 @@ function op_plugin_dir_path() {
  *
  * @return      string              absolute path to view
  */
-function op_view_dir_path($view) {
-  return op_plugin_dir_path() . 'views/' . $view;
+function opoh_view_dir_path($view) {
+  return opoh_plugin_dir_path() . 'views/' . $view;
 }
 
 /** ReturnsBootstrap File Path */
-function op_bootstrap_file_path() {
+function opoh_bootstrap_file_path() {
   return __FILE__;
 }
 
@@ -90,21 +88,21 @@ function op_bootstrap_file_path() {
  *
  * @param       string $className Name of the class that shall be loaded
  */
-function op_autoloader($className) {
-  $filepath = op_plugin_dir_path() . 'classes/' . str_replace('\\', '/', $className) . '.php';
+function opoh_autoloader($className) {
+  $filepath = opoh_plugin_dir_path() . 'classes/' . str_replace('\\', '/', $className) . '.php';
 
   if (file_exists($filepath)) {
     require_once $filepath;
   }
 }
 
-spl_autoload_register('op_autoloader');
+spl_autoload_register('opoh_autoloader');
 
 /**
  * Check requirements and load main class
  * The main program needs to be in a separate file that only gets loaded if the plugin requirements are met. Otherwise
  * older PHP installations could crash when trying to parse it.
  */
-if (op_requirements()) {
+if (opoh_requirements()) {
   require_once 'run.php';
 }

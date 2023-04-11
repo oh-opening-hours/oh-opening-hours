@@ -1,8 +1,8 @@
 <?php
 
-use OpeningHours\Entity\IrregularOpening;
-use OpeningHours\Entity\Set;
-use OpeningHours\Util\Dates;
+use OH_Opening_Hours\Entity\IrregularOpening;
+use OH_Opening_Hours\Entity\Set;
+use OH_Opening_Hours\Util\Dates;
 
 extract( $this->data['attributes'] );
 
@@ -27,27 +27,27 @@ extract( $this->data['attributes'] );
 if ( !count( $irregular_openings ) )
 	return;
 
-echo $before_widget;
+echo wp_kses_post($before_widget);
 
 if ( ! empty( $title ) ) {
-	echo $before_title . esc_html( $title ) . $after_title;
+	echo wp_kses_post($before_title) . esc_html( $title ) . wp_kses_post($after_title);
 }
 ?>
 
-<table class="op-table-irregular-openings op-table op-irregular-openings">
-  <tbody>
+<section class="op-table-irregular-openings op-table op-irregular-openings">
+  <div class="row">
   <?php
   /** @var IrregularOpening $io */
   foreach ($irregular_openings as $io) :
     $highlighted = ($highlight && $io->isInEffect()) ? $class_highlighted : '';
   ?>
-    <tr class="op-irregular-opening <?php echo esc_attr($highlighted); ?>">
-      <td class="col-name"><?php echo esc_html( $io->getName() ); ?></td>
-      <td class="col-date"><?php echo esc_html( Dates::format($date_format, $io->getDate()) ); ?></td>
-      <td class="col-time"><?php echo esc_html( $io->getFormattedTimeRange($time_format) ); ?></td>
-    </tr>
+    <div class="op-irregular-opening <?php echo esc_attr($highlighted); ?>">
+      <div class="col col-name"><?php echo esc_html( $io->getName() ); ?></div>
+      <div class="col col-date"><?php echo esc_html( Dates::format($date_format, $io->getDate()) ); ?></div>
+      <div class="col col-time"><?php echo esc_html( $io->getFormattedTimeRange($time_format) ); ?></div>
+    </div>
   <?php endforeach; ?>
-  </tbody>
-</table>
+  </div>
+</section>
 
-<?php echo $after_widget; ?>
+<?php echo wp_kses_post($after_widget); ?>

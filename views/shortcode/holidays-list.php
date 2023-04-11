@@ -1,8 +1,8 @@
 <?php
 
-use OpeningHours\Entity\Holiday;
-use OpeningHours\Entity\Set;
-use OpeningHours\Util\Dates;
+use OH_Opening_Hours\Entity\Holiday;
+use OH_Opening_Hours\Entity\Set;
+use OH_Opening_Hours\Util\Dates;
 
 extract( $this->data['attributes'] );
 
@@ -27,10 +27,10 @@ extract( $this->data['attributes'] );
 if ( !count( $holidays ) )
 	return;
 
-echo $before_widget;
+echo wp_kses_post($before_widget);
 
 if ( ! empty( $title ) ) {
-	echo $before_title . esc_html( $title ) . $after_title;
+	echo wp_kses_post($before_title) . esc_html( $title ) . wp_kses_post($after_title);
 }
 
 ?>
@@ -45,4 +45,4 @@ if ( ! empty( $title ) ) {
     <?php endforeach; ?>
 </dl>
 
-<?php echo $after_widget; ?>
+<?php echo wp_kses_post($after_widget); ?>

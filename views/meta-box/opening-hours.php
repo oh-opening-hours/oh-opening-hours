@@ -1,49 +1,49 @@
 <?php
 
-use OpeningHours\Module\CustomPostType\MetaBox\OpeningHours as MetaBox;
-use OpeningHours\Util\ViewRenderer;
-use OpeningHours\Util\Weekday;
+use OH_Opening_Hours\Module\CustomPostType\MetaBox\OH_Opening_Hours as MetaBox;
+use OH_Opening_Hours\Util\ViewRenderer;
+use OH_Opening_Hours\Util\Weekday;
 
 MetaBox::getInstance()->nonceField();
 ?>
 
 <div class="opening-hours">
-	<table class="form-table form-opening-hours">
-		<tbody>
+	<section class="form-table form-opening-hours">
+		<div class="row-wrap row flex-direction-vertical">
 		<?php foreach ( $this->data['periods'] as $day ) :
 			/** @var Weekday $weekday */
 			$weekday = $day['day'];
 			?>
-			<tr class="periods-day">
-				<td class="col-name" valign="top">
+			<div class="periods-day row flex-direction-horizontal">
+				<div class="col col-name" valign="top">
 					<?php echo esc_html($weekday->getName()); ?>
-				</td>
+				</div>
 
-				<td class="col-times" colspan="2" valign="top">
-					<div class="period-container" data-day="<?php echo $weekday->getIndex(); ?>"
+				<div class="col col-times" colspan="2" valign="top">
+					<div class="period-container" data-day="<?php echo esc_attr($weekday->getIndex()); ?>"
 						data-set="<?php echo esc_attr($this->data['set']->getId()); ?>">
 
-						<table class="period-table">
-							<tbody>
+						<section class="period-table">
+							<div class="row-wrap row flex-direction-vertical">
 							<?php foreach ( $day['periods'] as $period ) {
-								$vr = new ViewRenderer(op_view_dir_path(MetaBox::TEMPLATE_PATH_SINGLE), array(
+								$vr = new ViewRenderer(opoh_view_dir_path(MetaBox::TEMPLATE_PATH_SINGLE), array(
 									'period' => $period
 								) );
-								$vr->render();
+								wp_kses_post($vr->render());
 							} ?>
-							</tbody>
-						</table>
+							</div>
+						</section>
 
 					</div>
-				</td>
+				</div>
 
-				<td class="col-options" valign="top">
+				<div class="col col-options" valign="top">
 					<a class="components-button add-period green has-icon">
 						<i class="dashicons dashicons-plus"></i>
 					</a>
-				</td>
-			</tr>
+				</div>
+			</div>
 		<?php endforeach; ?>
-		</tbody>
-	</table>
+		</div>
+	</section>
 </div>
