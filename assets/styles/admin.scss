@@ -4,3 +4,13 @@
 @import "../../node_modules/@wordpress/base-styles/_variables.scss";
 @import "../../node_modules/@wordpress/components/src/utils/theme-variables.scss";
 @import "../../node_modules/@wordpress/components/src/button/style.scss";
+@import "_grid";
+
+.col-remove, .col-delete-period, .col-options {
+	.components-button.has-icon {
+		height: 30px;
+	}
+}
+.col-remove {
+	flex: 0 0 50px;
+}

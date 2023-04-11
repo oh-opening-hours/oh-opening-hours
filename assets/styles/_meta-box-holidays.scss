@@ -1,4 +1,4 @@
-table.op-holidays {
+section.op-holidays {
   width: 100%;
 
   .col-name {
@@ -8,12 +8,8 @@ table.op-holidays {
   .col-date-start, .col-date-end {
     width: 20%;
   }
-
-  .col-remove {
-    width: 10%;
-  }
 }
 
 .button.add-holiday {
-  margin:   5px 3px;
+  margin:   5px 0;
 }

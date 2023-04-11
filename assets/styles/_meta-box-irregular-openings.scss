@@ -1,4 +1,4 @@
-table.op-irregular-openings {
+section.op-irregular-openings {
   width:    100%;
 
   .op-irregular-opening {
@@ -6,13 +6,9 @@ table.op-irregular-openings {
     .col-name, .col-date, .col-time-start, .col-time-end {
       width:    18%;
     }
-
-    .col-remove {
-      width:    10%;
-    }
   }
 }
 
 .button.add-io {
-  margin:   5px 3px;
+  margin:   5px 0;
 }

@@ -6,11 +6,11 @@
 jQuery.fn.opIOs = function() {
   var wrap = jQuery(this);
 
-  var ioWrap = wrap.find("tbody");
+  var ioWrap = wrap.find("div.row-wrap");
   var addButton = jQuery(wrap.find(".add-io"));
 
   function init() {
-    ioWrap.find("tr.op-irregular-opening").each(function(index, element) {
+    ioWrap.find("div.op-irregular-opening").each(function(index, element) {
       jQuery(element).opSingleIO();
     });
   }
@@ -19,7 +19,7 @@ jQuery.fn.opIOs = function() {
 
   function add() {
     var data = {
-      action: "op_render_single_dummy_irregular_opening"
+      action: "opoh_render_single_dummy_irregular_opening"
     };
 
     jQuery.post(ajax_object.ajax_url, data, function(response) {

@@ -1,0 +1,16 @@
+header, .row {
+	display: flex;  /* aligns all child elements (flex items) in a row */
+	gap: 5px 10px;
+	justify-content: space-around;
+	&.flex-direction-horizontal {
+		flex-direction: row;
+	}
+	&.flex-direction-vertical {
+		flex-direction: column;
+	}
+}
+
+
+.col {
+	flex: 1;        /* distributes space on the line equally among items */
+}

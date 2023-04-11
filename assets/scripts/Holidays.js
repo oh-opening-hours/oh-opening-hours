@@ -6,11 +6,11 @@
 jQuery.fn.opHolidays = function() {
   var wrap = jQuery(this);
 
-  var holidaysWrap = wrap.find("tbody");
+  var holidaysWrap = wrap.find("div.row-wrap");
   var addButton = wrap.find(".add-holiday");
 
   function init() {
-    holidaysWrap.find("tr.op-holiday").each(function(index, element) {
+    holidaysWrap.find("div.op-holiday").each(function(index, element) {
       jQuery(element).opSingleHoliday();
     });
   }
@@ -19,7 +19,7 @@ jQuery.fn.opHolidays = function() {
 
   function add() {
     var data = {
-      action: "op_render_single_dummy_holiday"
+      action: "opoh_render_single_dummy_holiday"
     };
 
     jQuery.post(ajax_object.ajax_url, data, function(response) {

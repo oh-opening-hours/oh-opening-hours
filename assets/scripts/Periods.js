@@ -4,12 +4,12 @@ jQuery(function($) {
       var wrap = $(element);
 
       var periodContainer = wrap.find(".period-container");
-      var tbody = periodContainer.find("tbody");
+      var tbody = periodContainer.find("div.row-wrap");
       var btnAddPeriod = wrap.find("a.add-period");
 
       function addPeriod() {
         var data = {
-          action: "op_render_single_period",
+          action: "opoh_render_single_period",
           weekday: periodContainer.attr("data-day"),
           set: periodContainer.attr("data-set")
         };
@@ -59,7 +59,7 @@ jQuery(function($) {
 
   $(document).ready(function() {
     var form = $(".form-opening-hours");
-    form.find("tr.periods-day").opPeriodsDay();
-    form.find("tr.period").opSinglePeriod();
+    form.find("div.periods-day").opPeriodsDay();
+    form.find("div.period").opSinglePeriod();
   });
 });

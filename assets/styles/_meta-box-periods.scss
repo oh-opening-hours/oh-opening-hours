@@ -1,7 +1,7 @@
-table.form-opening-hours {
+section.form-opening-hours {
 
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
 
   margin: auto;
 
@@ -17,51 +17,37 @@ table.form-opening-hours {
   $color-green: green;
   $color-red: red;
 
-  tbody {
-
-    td {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    td.col-times {
-
-      width: $col-times-width;
-
-      table.period-table {
-        width: 100%;
-
-        tr.period {
-
-          .input-timepicker {
-            width: 70px;
-            box-shadow: none;
-            background: #efefef;
-            border: 1px solid #cccccc;
-            text-align: center;
-          }
-
-          .col-time-start, .col-time-end {
-            width: $col-time-width;
-            text-align: center;
-          }
-
-          .col-delete-period {
-            width: $col-delete-width;
-            text-align: left;
-          }
+  div.period-table {
+    width: 100%;
+    div.period {
+      .input-timepicker {
+          width: 70px;
+          box-shadow: none;
+          background: #efefef;
+          border: 1px solid #cccccc;
+          text-align: center;
+        }
+      .col-time-start, .col-time-end {
+          width: $col-time-width;
+          text-align: center;
+        }
+      .col-delete-period {
+          width: $col-delete-width;
+          text-align: left;
         }
       }
-    }
+  }
 
-    td.col-name {
+  div.periods-day {
+    &:not(:first-child){
+      margin-top: 1rem;
+    }
+    div.col-name {
       width: $col-day-width;
       font-weight: bold;
     }
-
-    td.col-options {
+    div.col-options {
       width: $col-options-width;
-
       .add-period {
         color: $color-green;
         box-shadow: inset 0 0 0 1px $color-green;
@@ -70,27 +56,13 @@ table.form-opening-hours {
     }
   }
 
-  // responsive
-  @media ( max-width: $screen-breakpoint ) {
-    td, th {
-      display: table-cell;
-    }
+    @media ( max-width: 530px ) {
+      .input-timepicker {
+        font-size: 12px;
+      }
+    // /responsive
   }
-
-  @media ( max-width: 530px ) {
-
-    .input-timepicker {
-      font-size: 12px;
-    }
-
-    .button {
-      padding: 3px 5px;
-    }
-
-  }
-  // /responsive
-}
-
+} 
 .field h4.heading {
   margin-bottom:    0;
 
